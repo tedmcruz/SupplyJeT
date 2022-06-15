@@ -1,3 +1,10 @@
+@keyframes shake{
+    0% {left: 0px; transform: rotate(0deg);}
+    25% {left: 100px;}
+    75% {left: -100px;}
+    100% {left: 0px; transform: rotate(360deg);}
+}
+
 /* BODY */
 
 body{
@@ -17,6 +24,11 @@ header{
 /* SupplyJeT Temporal Logo */
 
 #supplyjetlogo{
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    transform: rotate(360deg);
+    transition: transform 3s;
     position: relative;
     width: 536px;
     height: 373px;
@@ -155,6 +167,7 @@ nav {
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
+    transition: transform .5s;
 }
 
 .departamentos__iluminacion{
@@ -175,6 +188,7 @@ nav {
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
+    transition: transform .5s;
 }
 
 .departamentos__pisos{
@@ -195,6 +209,7 @@ nav {
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
+    transition: transform .5s;
 }
 
 .departamentos__cocinas{
@@ -215,6 +230,7 @@ nav {
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
+    transition: transform .5s;
 }
 
 .departamentos__oficinas{
@@ -235,6 +251,7 @@ nav {
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
+    transition: transform .5s;
 }
 
 .departamentos__ferreteria{
@@ -255,6 +272,7 @@ nav {
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
+    transition: transform .5s;
 }
 
 .departamentos__construccion{
@@ -275,11 +293,12 @@ nav {
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
+    transition: transform .5s;
 }
 
 .departamentos__equipos{
     grid-area: equipos;
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -295,6 +314,39 @@ nav {
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
+    transition: transform .5s;
+}
+
+.departamentos__banos:hover{
+    transform: scale(1.4);
+}
+
+.departamentos__iluminacion:hover{
+    transform: scale(1.4);
+}
+
+.departamentos__pisos:hover{
+    transform: scale(1.4);
+}
+
+.departamentos__cocinas:hover{
+    transform: scale(1.4);
+}
+
+.departamentos__oficinas:hover{
+    transform: scale(1.4);
+}
+
+.departamentos__ferreteria:hover{
+    transform: scale(1.4);
+}
+
+.departamentos__construccion:hover{
+    transform: scale(1.4);
+}
+
+.departamentos__equipos:hover{
+   transform: scale(1.4);
 }
 
 .departamentos__imagenes{
