@@ -20,6 +20,16 @@ header{
     margin: 0;
 }
 
+.page__header{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 42px;
+    color: #080927;
+}
+
 /* SupplyJeT Temporal Logo */
 
 #supplyjetlogo{
@@ -107,12 +117,12 @@ nav {
     color: #080927;
 }
 
-.departamentos__header{
+/* .departamentos__header{
     display:flex;
     justify-content: center;
     font-size: 42px;
     color: #080927;
-}
+} */
 
 .departamentos__lista{
     display: grid;
@@ -173,7 +183,7 @@ footer{
 
 /* Contactanos*/
 
-.contacto__header{
+/* .contacto__header{
     position: relative;
     text-align: center;
     list-style-type: none;
@@ -183,26 +193,13 @@ footer{
     font-weight: bold;
     font-size: 42px;
     color: #080927;
-}
+} */
 
 .form-contacto{
     display: grid;
     grid-template-columns: 500px;
     justify-content: center;
     font-size: 20px;
-
-    /* position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 51px;
-    color: #080927; */
 }
 
 /* NOSOTROS */
@@ -213,7 +210,7 @@ footer{
     font-size: 42px;
 }
 
-.nosotros__summary{
+.nosotros{
     display: grid;
     grid-template-areas:
     "p h3 h4 p1";
@@ -222,7 +219,7 @@ footer{
     justify-content: center;
 }
 
-.nosotros__header{
+/* .nosotros__header{
     position: relative;
     text-align: center;
     list-style-type: none;
@@ -233,7 +230,7 @@ footer{
     padding: 0 5%;
     font-size: 32px;
     color: #080927;
-}
+} */
 
 .nosotros__text{
     text-align: center;
@@ -245,43 +242,32 @@ footer{
 
 .preguntasFrecuentes{
     display: grid;
-    grid-template-rows:auto;
-    align-items: center;
-    justify-content: center;
-    /* display:flex;
-    flex-direction: column;
-    position: relative;
-    text-align: center;
-    width: 1440px;
-    height: 100%;
-    margin: 20px 10% 0px;
-    color: #080927; */
+    max-width: 1200px;
+    margin: auto
 }
 
-.preguntasFrecuentes__header{
+/* .preguntasFrecuentes__header{
     text-align: center;
+    justify-content: center;
     color: #080927;
     font-size: 42px;
-}
+} */
 
 .preguntasFrecuentes__pregunta{
-    display: flex;
     justify-content: start;
     list-style-type: none;
     font-weight: 400;
     font-size: 38px;
+    margin: 0 10%;
     color: #FFFFFF;
 }
 
 .preguntasFrecuentes__respuesta{
-    display: inline-block;
     list-style-type: none;
     align-items: center;
-    justify-content: center;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 34px;
+    margin: 0 10%;
     color: #080927;
 }
 
@@ -289,64 +275,71 @@ footer{
 
 .cotizaciones{
     display:flex;
-    flex-wrap: wrap;
-    position: relative;
+    flex-direction: column;
     text-align: center;
-    width: 1440px;
-    height: 100%;
-    margin: 20px 10% 0px;
+    justify-content: center;
     color: #080927;
 }
 
-.cotizaciones__header{
-    position: relative;
-    text-align: center;
+.cotizaciones__lista{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    justify-content: center;
     list-style-type: none;
-    width: 100%;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 42px;
-    margin: 0% 10%;
-    color: #080927;
+    gap: 2em;
+    max-width: 1200px;
+    margin: 0 10%;
+    padding: 0;
 }
 
 .cotizaciones__item{
-    display: inline-block;
+    display: flex;
+}
+
+.cotizaciones__imagenes{
+    display: flex;
+    justify-content: center;
     list-style-type: none;
-    width: 231px;
-    height: 210px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 0px;
-    padding: 30px 30px 0px 30px  ; 
-    margin: 10px;
+    height: 180px;
+    width: 180px;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
     background-color:#DFE0E2;
+}
+
+.cotizaciones__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cotizaciones__name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 0;
+    /* max-height: 300px;
+    max-width: 300px;
+    width: 100%;
+    height: 100%; */
     color: #080927;
 }
 
 .cotizaciones__descripcion{
-    position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     list-style-type: none;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
-    line-height: 0px;
+    font-size: 20px;
     color: #080927;
-    margin-top: 200px;
-    bottom: 100px;
-}
-
-.cotizaciones__imagenes{
-    width: 231px;
-    height: 180px;
-    padding-bottom: 15px;
+    margin: 2.5% 5%;
 }
 
 /* Carrito */
@@ -370,7 +363,7 @@ footer{
     color: #080927; */
 }
 
-.carrito__header{
+/* .carrito__header{
     grid-area: cheader;
     display:flex;
     justify-content: center;
@@ -378,7 +371,7 @@ footer{
     font-weight: bold;
     font-size: 42px;
     color: #080927;
-}
+} */
 
 .carrito__lista{
     position: relative;
@@ -606,7 +599,7 @@ footer{
         padding: 0.3rem 1.2rem; 
     }
 
-    .departamentos__header{
+    .page__header{
         font-size: 38px;
     }    
 
@@ -622,7 +615,7 @@ footer{
         flex-direction: column;
     }
 
-    .departamentos__header{
+    .page__header{
         font-size: 34px;
     }    
 
@@ -630,10 +623,19 @@ footer{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
+
+    .cotizaciones__imagenes{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+    .cotizaciones__item{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 425px){
-    .departamentos__header{
+    .page__header{
         font-size: 28px;
     }    
 
