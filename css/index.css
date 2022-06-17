@@ -9,16 +9,15 @@
 
 body{
     background-color: #386B67;
+    margin: 0;
 }
 
 /* TOP SCREEN */
 
 header{
-    position: relative;
-    height: 415px;
     background-color: #DFE0E2;
-    min-width: 100%;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
 }
 
 /* SupplyJeT Temporal Logo */
@@ -30,9 +29,8 @@ header{
     transform: rotate(360deg);
     transition: transform 3s;
     position: relative;
-    width: 536px;
-    height: 373px;
-    background: url(SJT.png);
+    width: 15%;
+    height: auto;
 }
 
 /* MENU */
@@ -41,19 +39,18 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative;
-    height: 41px;
-    max-width: 1200px;
+    max-width: 100%;
     min-width: 320px;
     margin: 0 auto;
+    bottom: 0;
     background-color: #7e7f81;
 }
 
 .menu{
     display:flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    position: relative;
     list-style-type: none;
     text-align: center;
     margin: 0;
@@ -63,12 +60,8 @@ nav {
 
 .menu__item{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    font-family: 'Inter';
-    font-style: normal;
-    font-size: auto;
-    padding: 0px 30px; 
+    font-size: 16px;
     margin: 0 auto;
     text-decoration: none;
     list-style-type: none;
@@ -90,7 +83,8 @@ nav {
 
 .menu__link{
     text-decoration: none;
-    color: #000000; 
+    color: #000000;
+    padding: 0.4rem 1.5rem; 
 }
 
 .menu__link:active{
@@ -106,252 +100,56 @@ nav {
 /* DEPARTAMENTOS */
 
 .departamentos{
-    /* display: grid;
-    
-    grid-template-areas: 
-    " . header header . "
-    " banos iluminacion pisos cocinas " 
-    " oficinas ferreteria construccion equipos "
-    ;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; */
-
     display:flex;
     flex-direction: column;
-    position: relative;
     text-align: center;
     justify-content: center;
-    margin: 20px 10% 0px;
     color: #080927;
 }
 
 .departamentos__header{
-    grid-area: dheader;
     display:flex;
     justify-content: center;
-    text-align: center;
-    font-weight: bold;
     font-size: 42px;
     color: #080927;
 }
 
 .departamentos__lista{
-    position: relative;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
-    grid-template-areas: 
-    ". dheader dheader ."
-    "banos iluminacion pisos cocinas" 
-    "oficinas ferreteria construccion equipos"
-    ;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0 1fr 1fr ;
-
+    gap: 2em;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
 }
 
-.departamentos__banos{
-    grid-area: banos;
+.departamentos__area{
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     list-style: none;
-    width: auto;
-    height: auto;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
+    max-height: 300px;
+    max-width: 300px;
+    /* width: 100%;
+    height: 100%; */
     padding: 10% 10% 0 10%  ; 
-    margin: 10% 5%;
     border-style: solid;
     background-color:#DFE0E2;
     color: #080927;
     transition: transform .5s;
 }
 
-.departamentos__iluminacion{
-    grid-area: iluminacion;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    width: auto;
-    height: auto;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
-    padding: 10% 10% 0 10%  ; 
-    margin: 10% 5%;
-    border-style: solid;
-    background-color:#DFE0E2;
-    color: #080927;
-    transition: transform .5s;
-}
-
-.departamentos__pisos{
-    grid-area: pisos;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    width: auto;
-    height: auto;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
-    padding: 10% 10% 0 10%  ; 
-    margin: 10% 5%;
-    border-style: solid;
-    background-color:#DFE0E2;
-    color: #080927;
-    transition: transform .5s;
-}
-
-.departamentos__cocinas{
-    grid-area: cocinas;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    width: auto;
-    height: auto;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
-    padding: 10% 10% 0 10%  ; 
-    margin: 10% 5%;
-    border-style: solid;
-    background-color:#DFE0E2;
-    color: #080927;
-    transition: transform .5s;
-}
-
-.departamentos__oficinas{
-    grid-area: oficinas;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    width: auto;
-    height: auto;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
-    padding: 10% 10% 0 10%  ; 
-    margin: 10% 5%;
-    border-style: solid;
-    background-color:#DFE0E2;
-    color: #080927;
-    transition: transform .5s;
-}
-
-.departamentos__ferreteria{
-    grid-area: ferreteria;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    width: auto;
-    height: auto;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
-    padding: 10% 10% 0 10%  ; 
-    margin: 10% 5%;
-    border-style: solid;
-    background-color:#DFE0E2;
-    color: #080927;
-    transition: transform .5s;
-}
-
-.departamentos__construccion{
-    grid-area: construccion;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    width: auto;
-    height: auto;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
-    padding: 10% 10% 0 10%  ; 
-    margin: 10% 5%;
-    border-style: solid;
-    background-color:#DFE0E2;
-    color: #080927;
-    transition: transform .5s;
-}
-
-.departamentos__equipos{
-    grid-area: equipos;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    list-style: none;
-    width: auto;
-    height: auto;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 100%;
-    padding: 10% 10% 0 10%  ; 
-    margin: 10% 5%;
-    border-style: solid;
-    background-color:#DFE0E2;
-    color: #080927;
-    transition: transform .5s;
-}
-
-.departamentos__banos:hover{
+.departamentos__area:hover{
     transform: scale(1.4);
-}
-
-.departamentos__iluminacion:hover{
-    transform: scale(1.4);
-}
-
-.departamentos__pisos:hover{
-    transform: scale(1.4);
-}
-
-.departamentos__cocinas:hover{
-    transform: scale(1.4);
-}
-
-.departamentos__oficinas:hover{
-    transform: scale(1.4);
-}
-
-.departamentos__ferreteria:hover{
-    transform: scale(1.4);
-}
-
-.departamentos__construccion:hover{
-    transform: scale(1.4);
-}
-
-.departamentos__equipos:hover{
-   transform: scale(1.4);
 }
 
 .departamentos__imagenes{
+    display: block;
     width: 100%;
     height: 100%;
+    max-height: 100px;
     padding-bottom: 20%;
 }
 
@@ -797,4 +595,49 @@ footer{
     width: 231px;
     height: 180px;
     padding-bottom: 15px;
+}
+
+@media screen and (max-width: 768px){
+    .menu__item{
+        font-size: 12px;
+    }
+    
+    .menu__link{
+        padding: 0.3rem 1.2rem; 
+    }
+
+    .departamentos__header{
+        font-size: 38px;
+    }    
+
+    .departamentos__lista{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1.5em;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .menu{
+        flex-direction: column;
+    }
+
+    .departamentos__header{
+        font-size: 34px;
+    }    
+
+    .departamentos__lista{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 425px){
+    .departamentos__header{
+        font-size: 28px;
+    }    
+
+    .departamentos__lista{
+        grid-template-columns: repeat(1, 1fr);
+     }
 }
