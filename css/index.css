@@ -249,7 +249,7 @@ footer{
     justify-content: start;
     list-style-type: none;
     font-weight: 400;
-    font-size: 38px;
+    font-size: 34px;
     margin: 0 10%;
     color: #FFFFFF;
 }
@@ -258,8 +258,8 @@ footer{
     list-style-type: none;
     align-items: center;
     font-weight: 400;
-    font-size: 34px;
-    margin: 0 10%;
+    font-size: 24px;
+    margin: 1.5rem 10%;
     color: #080927;
 }
 
@@ -296,7 +296,9 @@ footer{
     height: 180px;
     width: 180px;
     border-style: solid;
+    padding: 6px;
     border-width: 3px;
+    border-radius: 15%;
     background-color:#DFE0E2;
 }
 
@@ -367,7 +369,9 @@ footer{
     height: 180px;
     width: 180px;
     border-style: solid;
+    padding: 6px;
     border-width: 3px;
+    border-radius: 15%;
     background-color:#DFE0E2;
 }
 
