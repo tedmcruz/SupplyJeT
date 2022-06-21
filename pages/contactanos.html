@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactanos</title>
-    <!-- <link rel="stylesheet" href="..\cssB\bootstrap.min.css"> -->
+    <link rel="stylesheet" href="..\cssB\bootstrap.min.css">
     <link rel="stylesheet" href="..\css\index.css">
 </head>
 <body>
@@ -38,20 +38,29 @@
     </header>
     <h2 class="page__header">CONTACTANOS</h2>
     <form class="form-contacto" action="" method="post" enctype="multipart/form-data">
+        <div class="form-floating mb-3">
+        <input class="form-control" type="text" name="nombre" placeholder="Nombre">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" placeholder="Nombre">
+        </div>
         <br>
+        <div class="form-floating mb-3">
+        <input class="form-control" type="text" name="apellido" placeholder="Apellido">
         <label for="apellido">Apellido</label>
-        <input type="text" name="apellido" placeholder="Apellido">
+        </div>
         <br>
+        <div class="form-floating mb-3">
+        <input class="form-control" type="email" name="correo" placeholder="Correo">
         <label for="email">Email</label>
-        <input type="email" name="correo" placeholder="Correo">
+        </div>
         <br>
+        <div class="form-floating mb-3">
+        <input class="form-control" type="text" name="asunto" placeholder="Asunto">
         <label for="asunto">Asunto</label>
-        <input type="text" name="asunto" placeholder="Asunto">
+        </div>
         <br>
-        <textarea type="text" name="explicaion" placeholder="Explicacion" cols="60" rows="10"></textarea>
-        <br>
+        <div class="form-floating mb-3">
+        <textarea type="text" name="explicacion" placeholder="Explicacion" cols="60" rows="10"></textarea>
+        <div class="form-floating mb-3">
         <input type="submit">
     </form>
 </body>
