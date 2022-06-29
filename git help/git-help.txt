@@ -16,6 +16,7 @@ git log = to list all commits within a branch.
 git diff branchB...branchA = to show the diff of what is in branchA that is not in branchB.
 git log --follow [file] = to show the commits that changed file, even across renames.
 git log branchB..branchA = to show the commits on branchA that are not on branchB
+git push origin [branch] = Transmit local branch commits to the remote repository branch
 
 ----------------INTSALL NODE SASS----------------------------------
 Install "node.js version 17.4.0" for easy use.
