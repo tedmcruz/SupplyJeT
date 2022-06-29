@@ -22,6 +22,6 @@ q = quit running command
 ----------------INTSALL NODE SASS----------------------------------
 Install "node.js version 17.4.0" for easy use.
 node init = initialize node
-npm init = initialize npm
+npm init = initialize npm (Node Package Manager)
 npm install node-sass -D = to install node_modules. If an error is received because of python, check version of node. Last verified working version was 17.4.0.
 npm install = to install all dependencies the project may have as according to the "package.json" file on the project's main folder.
