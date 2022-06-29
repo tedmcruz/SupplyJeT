@@ -17,10 +17,11 @@ git diff branchB...branchA = to show the diff of what is in branchA that is not 
 git log --follow [file] = to show the commits that changed file, even across renames.
 git log branchB..branchA = to show the commits on branchA that are not on branchB
 git push origin [branch] = Transmit local branch commits to the remote repository branch
+q = quit running command
 
 ----------------INTSALL NODE SASS----------------------------------
 Install "node.js version 17.4.0" for easy use.
-run command "node init"
-run command "npm init"
-run command "npm install node-sass -D" to install node_modules. If an error is received because of python, check version of node. Last verified working version was 17.4.0.
-Use command "npm install" to install all dependencies the project may have as according to the "package.json" file on the project's main folder.
+node init = initialize node
+npm init = initialize npm
+npm install node-sass -D = to install node_modules. If an error is received because of python, check version of node. Last verified working version was 17.4.0.
+npm install = to install all dependencies the project may have as according to the "package.json" file on the project's main folder.
