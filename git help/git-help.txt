@@ -1,0 +1,25 @@
+----------------USING GIT AND GITHUB----------------------------------
+git config --global user.name “[firstname lastname]” = to name author.
+git config --global user.email “[valid-email]” = to assign email (use same email as github to make everything easier).
+git init = to initialize directory as Git repository.
+git clone [url] = to clone existeing git repository.
+git status = to check status of current branch or master.
+git add [file] = to add file to be ready to commit, replace "[file]" with "." to apply changes to everything on all files.
+git rest [file] = to reset file to previous stage before add, replace "[file]" with "." to apply changes to everything on all files.
+git commit -m “[descriptive message]” = to commit changes to upload to repository.
+git commit -a -m “[descriptive message]” = to commit while skipping adding stage.
+git branch = to list branches.
+git branch [branch-name] = to create new branch.
+git switch [branch-name] = to switch to chosen branch.
+git merge [branch-name] = to merge chosen branch to the branch were command was entered.
+git log = to list all commits within a branch.
+git diff branchB...branchA = to show the diff of what is in branchA that is not in branchB.
+git log --follow [file] = to show the commits that changed file, even across renames.
+git log branchB..branchA = to show the commits on branchA that are not on branchB
+
+----------------INTSALL NODE SASS----------------------------------
+Install "node.js version 17.4.0" for easy use.
+run command "node init"
+run command "npm init"
+run command "npm install node-sass -D" to install node_modules. If an error is received because of python, check version of node. Last verified working version was 17.4.0.
+Use command "npm install" to install all dependencies the project may have as according to the "package.json" file on the project's main folder.
