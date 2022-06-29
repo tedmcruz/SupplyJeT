@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/tedmcruz/SupplyJeT#readme",
   "devDependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.18"
   }
 }
