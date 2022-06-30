@@ -1,4 +1,4 @@
-----------------USING GIT AND GITHUB----------------------------------
+----------------USING GIT AND GITHUB (Press "." on GITHUB to open VSC on the web)----------------------------------
 git config --global user.name “[firstname lastname]” = to name author.
 git config --global user.email “[valid-email]” = to assign email (use same email as github to make everything easier).
 git init = to initialize directory as Git repository.
