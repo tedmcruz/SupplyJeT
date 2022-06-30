@@ -25,3 +25,13 @@ node init = initialize node
 npm init = initialize npm (Node Package Manager)
 npm install node-sass -D = to install node_modules. If an error is received because of python, check version of node. Last verified working version was 17.4.0.
 npm install = to install all dependencies the project may have as according to the "package.json" file on the project's main folder.
+npm install nodeman -D = to install nodeman
+
+---------------USE TRANSLATER---------------------------------------
+(Here a "," [comma] is needed after every line except the last line befor "}" [closing bracket] )
+"build-sass": "node-sass --include-path scss sass/index.scss css/translated.css", = script to write under "test" on "package.json" file. 
+npm run build-sass = to create and link "css\traslated.css" file to "sass\index.scss" file.
+
+"watch-sass": "nodemon -e scss -x \"npm run build-sass\"" = "script to write under "build-sass" on "package.json" file.
+npm run watch-sass = to run script continiously and update "css\translated.css"file automatically.
+press "CTRL" + "c" on terminal = to stop watch-sass
