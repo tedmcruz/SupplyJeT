@@ -149,6 +149,32 @@ footer {
   max-height: 10rem;
   padding-bottom: 20%; }
 
+/* Excludes 5 */
+.class:nth-last-of-type(0) {
+  background-color: aquamarine; }
+
+/* Excludes 5 */
+.class:nth-last-of-type(1) {
+  background-color: aquamarine; }
+
+/* Excludes 5 */
+.class:nth-last-of-type(2) {
+  background-color: aquamarine; }
+
+/* Excludes 5 */
+.class:nth-last-of-type(3) {
+  background-color: aquamarine; }
+
+/* Excludes 5 */
+.class:nth-last-of-type(4) {
+  background-color: aquamarine; }
+
+/* Includes 5 */
+/* Includes 5 */
+/* Includes 5 */
+/* Includes 5 */
+/* Includes 5 */
+/* Includes 5 */
 /* NOSOTROS */
 #nosotros {
   text-align: center;
