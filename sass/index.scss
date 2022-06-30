@@ -1,6 +1,20 @@
-.container {
-    .image{
-        height: 18rem;
-        width: 18rem;
-    }
-}
+/* MISC */
+@import './misc/variables';
+@import './misc/normalize';
+@import './misc/mixins';
+
+
+
+/* PARTIAL */
+@import './partials/header';
+@import './partials/footer';
+
+
+/* Views */
+
+@import './views/home';
+@import './views/nosotros';
+@import './views/cotizaciones';
+@import './views/preguntas-frecuentes';
+@import './views/contactanos';
+@import './views/carrito';
