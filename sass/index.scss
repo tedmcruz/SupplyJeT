@@ -1,4 +1,5 @@
 /* MISC */
+@import './misc/keyframes';
 @import './misc/variables';
 @import './misc/normalize';
 @import './misc/mixins';
@@ -9,10 +10,14 @@
 @import './partials/footer';
 
 
-/* Views */
+/* VIEWS */
 @import './views/home';
 @import './views/nosotros';
 @import './views/cotizaciones';
 @import './views/preguntas-frecuentes';
 @import './views/contactanos';
 @import './views/carrito';
+
+/* MEDIA QUERIES */
+
+@import './misc/media-queries'
