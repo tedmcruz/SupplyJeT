@@ -1,0 +1,69 @@
+/* Cotizaciones */
+
+.cotizaciones{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: #080927;
+}
+
+.cotizaciones__lista{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    list-style-type: none;
+    gap: map-get($spacing, "spacing-l" );
+    max-width: 120rem;
+    margin: 0 10%;
+    padding: 0;
+}
+
+.cotizaciones__item{
+    display: flex;
+}
+
+.cotizaciones__imagenes{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    @include sizes (18rem,18rem);
+    border-style: solid;
+    padding: 0.6rem;
+    border-width: 0.3rem;
+    border-radius: 15%;
+    background-color:#DFE0E2;
+}
+
+.cotizaciones__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cotizaciones__name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #080927;
+}
+
+.cotizaciones__descripcion{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #080927;
+    margin: 2.5% 5%;
+}
+
