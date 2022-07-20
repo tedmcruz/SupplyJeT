@@ -20,3 +20,15 @@ To asigne a value to a variable, use " = " sign.
 
 alert("Este pagina es para compras y cotizaciones en SUPPLYJET");
 
+function probarCodigo()
+    {
+        let suma;
+        var numero1;
+        let numero2;
+            numero1=8;
+            numero2=10;
+            suma=numero1+numero2;
+            mensaje="Resultado = "+suma;
+        alert(mensaje)
+    }
+
