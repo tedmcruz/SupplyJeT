@@ -28,7 +28,7 @@ npm install = to install all dependencies the project may have as according to t
 npm install nodeman -D = to install nodeman
 
 ---------------USE TRANSLATER---------------------------------------
-(Here a "," [comma] is needed after every line except the last line befor "}" [closing bracket] )
+(Here a "," [comma] is needed after every line except the last line before "}" [closing bracket] )
 "build-sass": "node-sass --include-path scss sass/index.scss css/translated.css", = script to write under "test" on "package.json" file. 
 npm run build-sass = to create and link "css\traslated.css" file to "sass\index.scss" file.
 
