@@ -78,5 +78,13 @@ function probarCodigo()
 
         }
 
+        let nombre4=prompt("Ingrese Nombre","John");
+        let numero4=prompt("Ingrese Numero del cual quiere saber 10 numeros que le siguen",0);
+        console.log("Saludos "+nombre4+". Los 10 numeros que le siguen a "+numero4+" son:");
+        for(i4=1;i4<=10;i4=i4+1) {
+            let resultado4=parseInt(numero4)+parseInt(i4);
+            console.log(i4+" = "+resultado4);
+        }
+
     }
 
