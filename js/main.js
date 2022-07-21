@@ -33,7 +33,7 @@ When using "do" "while", there is no need to put a new prompt at the end.
 When using "switch" within "while", the code run will skip until the "case" with the entered value. The "default" will run when the prompt value doesn't match a "case" value.
 */
 
-alert("Este pagina es para compras y cotizaciones en SUPPLYJET");
+// alert("Este pagina es para compras y cotizaciones en SUPPLYJET");
 
 function probarCodigo()
     {   
@@ -41,13 +41,42 @@ function probarCodigo()
         let apellido=prompt("Ingrese Apellido","Smith");
         let edad=prompt("Ingrese edad",33)
         let suma;
-        var numero1;
-        let numero2;
-            numero1=prompt("Numero primer a sumar");
-            numero2=prompt("Segundo numero a sumar");
-            suma=parseInt(numero1)+parseInt(numero2);
+        var numeroA;
+        let numeroB;
+            numeroA=prompt("Numero primer a sumar",1);
+            numeroB=prompt("Segundo numero a sumar",2);
+            suma=parseInt(numeroA)+parseInt(numeroB);
             mensaje="Soy "+ nombre + " " + apellido + " y tengo " + edad + " años de edad." + " El resultado de la suma solicitada = "+suma;
         alert(mensaje);
         console.log(mensaje);
+
+        let nombre1=prompt("Ingrese Nombre","John");
+        let numero1=prompt("Ingrese Numero del cual quiere saber los primero 20 multiplos",1);
+        for(i=1;i<=10;i=i+1) {
+            let resultado1=numero1*i;
+            console.log("Saludos "+nombre1+". El resultado de "+numero1+" X "+i+" = "+resultado1);
+        }
+
+        let paisDeOrigen2=prompt("Adivine mi pais de origen","Pista = RD");
+        let i2 = 1;
+        while(paisDeOrigen2!="ESC"){
+            if(paisDeOrigen2=="Republica Dominicana"||paisDeOrigen2=="republica dominicana"||paisDeOrigen2=="REPUBLICA DOMINICANA"){
+                console.log("Felicitaciones adivino correctamente mi pais de origen en su intento numero "+i2+".");
+                alert("Felicitaciones adivino correctamente mi pais de origen en su intento numero "+i2+".");
+                break;
+            }
+            console.log("Mi pais de origen no es "+paisDeOrigen2+" favor intentar nuevamente o precionar ESC cuando aparezca el espacio nuevamente. Numero de intentos fallidos = "+i2+".");
+            alert("Mi pais de origen no es "+paisDeOrigen2+" favor intentar nuevamente o precionar ESC cuando aparezca el espacio nuevamente. Numero de intentos fallidos = "+i2+".");
+            i2=i2+1
+            paisDeOrigen2=prompt("Adivine mi pais de origen","Pista = RD");
+        }
+
+        let i3;
+        let numero3=prompt("Ingrese numero de veces que se repetira la palabra HOLA",10)
+        for(i3=1;i3<=numero3;i3=i3+1){
+            console.log("HOLA")
+
+        }
+
     }
 
