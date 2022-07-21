@@ -46,7 +46,7 @@ function probarCodigo()
             numeroA=prompt("Numero primer a sumar",1);
             numeroB=prompt("Segundo numero a sumar",2);
             suma=parseInt(numeroA)+parseInt(numeroB);
-            mensaje="Soy "+ nombre + " " + apellido + " y tengo " + edad + " años de edad." + " El resultado de la suma solicitada = "+suma;
+            mensaje="Soy "+ nombre + " " + apellido + " y tengo " + edad + " años de edad." + " El resultado de la suma solicitada = "+suma+".";
         alert(mensaje);
         console.log(mensaje);
 
@@ -54,7 +54,7 @@ function probarCodigo()
         let numero1=prompt("Ingrese Numero del cual quiere saber los primero 20 multiplos",1);
         for(i=1;i<=10;i=i+1) {
             let resultado1=numero1*i;
-            console.log("Saludos "+nombre1+". El resultado de "+numero1+" X "+i+" = "+resultado1);
+            console.log("Saludos "+nombre1+". El resultado de "+numero1+" X "+i+" = "+resultado1+".");
         }
 
         let paisDeOrigen2=prompt("Adivine mi pais de origen","Pista = RD");
