@@ -17,6 +17,9 @@ It is possibe to do mathematical formulas in JS without any aditional steps othe
 If the add fuction is used on a string, it will concatenate the strings without spaces.
 To asigne a value to a variable, use " = " sign.
 One "=" asigns, two "==" compares, three "===" compares value and type of data.
+"!=" different from. "!==" stictly different from.
+" < , <= , > , >= " comparative operators.
+"&&" = and , "||" = or , "!" = not.
 To use prompt it is imperative to use an " = " sign, for ex:[ let name = prompt("Enter Name","No name entered"); ] , this allows for user input. Whatever is witten after the " , " will be the default value if nothing is entered.
 To use console it is imperative to use an " = " sign, for ex:[ console.log("Test message"); ] , this shows "Test message" on brower console.
 To use alert it is not necessary to use " = " sign, for ex:[ alert("Test message"); ] , this will alert for user of message "Test message".
