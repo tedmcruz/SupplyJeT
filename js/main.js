@@ -127,14 +127,6 @@ function probarCodigo()
         console.log("Digito que la cantidad de variedad de articulos a cotizar sera de"+" "+variedadDeArticulos+".");
         return +variedadDeArticulos;
     }
-        /*let variedadDeArticulos;
-        variedadDeArticulos=prompt("Ingrese la cantidad de variedad de articulos que va a cotizar.");
-        while (!/^[0-9]+$/.test(variedadDeArticulos)) {
-            alert("No introdujo un numero.");
-            variedadDeArticulos=prompt("Ingrese la cantidad de variedad de articulos que va a cotizar.");
-        }
-        console.log("Digito que la cantidad de variedad de articulos a cotizar sera de"+" "+variedadDeArticulos+".");
-    }*/
 
     function descuentoPorCodigo() {
         let codigoDeDescuento=prompt("Digitar Codigo de Descuento");
@@ -155,7 +147,8 @@ function probarCodigo()
         }
     }
 
-    function probarSimulador() {
+    function probarSimulador() 
+    {
         let nombreCompleto=solicitarNombreCompleto();
         let nombreArticulos=["BAÑOS","ILUMINACION","PISOS","COCINAS","OFICINAS","FERRETERIA","CONSTRUCCION","EQUIPOS"];
         let itbis=1.18;
@@ -251,5 +244,58 @@ function probarCodigo()
         )
     }
 
-    /*||articuloCotizacion!="BAÑOS"||articuloCotizacion!="ILUMINACION"||articuloCotizacion!="PISOS"||articuloCotizacion!="COCINAS"||articuloCotizacion!="OFICINAS"||articuloCotizacion!="FERRETERIA"||articuloCotizacion!="CONSTRUCCION"||articuloCotizacion!="EQUIPOS"*/
-     // for(variedad=1;variedad<=variedadDeArticulos;variedad=variedad+1) {
+    function probarConstructor() 
+    {
+        const nombresDeProductos = [
+            "BAÑOS",
+            "ILUMINACION",
+            "PISOS",
+            "COCINAS",
+            "OFICINAS",
+            "FERRETERIA",
+            "CONSTRUCCION",
+            "EQUIPOS"
+        ];
+
+        const preciosDeProductos = [
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80
+        ];
+
+        let nombre = prompt(nombresDeProductos,"BAÑOS");
+            while(nombresDeProductos.includes(nombre)!=true) {
+                alert("INTRODUZCA PRODUCTO VALIDO");
+                nombre = prompt(nombresDeProductos,"BAÑOS");
+                // if (nombresDeProductos.includes(nombre)==true){
+                //     break;
+                // };
+            };
+        let precio = parseFloat(preciosDeProductos[nombresDeProductos.indexOf(nombre)]);
+        let cantidad = prompt("INTRODUZCA CANTIDAD DE "+nombre+" QUE DESEA.");
+        
+        class producto {
+            constructor (nombre, precio, cantidad){
+                this.nombre = nombre;
+                this.precio = parseFloat(precio);
+                this.cantidad = parseInt(cantidad);
+            }
+            sumarItbis() {
+                this.precio = this.cantidad* this.precio * 1.18;
+                this.precio = this.precio.toFixed(2);
+            }
+            mostrar() {
+                console.log("El precio de "+this.cantidad+" "+this.nombre+" = "+this.precio+".")
+            };
+        }
+
+        const producto1 = new producto(nombre,precio,cantidad);
+        producto1.sumarItbis();
+        producto1.mostrar();
+        
+    }
