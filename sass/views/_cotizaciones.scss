@@ -75,3 +75,19 @@
     font-weight: bolder;
     
 }
+
+.cotizaciones_precio{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+.precioArticulo{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+}

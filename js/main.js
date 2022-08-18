@@ -174,58 +174,58 @@ function probarCodigo()
         let articuloCotizacion;
         // while(articuloCotizacion!="ESC"||variedad!=variedadDeArticulos||variedadDeArticulos!=0){  
         for(variedad=1;variedad<=variedadDeArticulos;variedad=variedad+1) {
-                articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 let numeroDeArticulos=parseInt(prompt("Ingrese la cantidad de"+" "+articuloCotizacion+" "+"que desea cotizar."));
                 if (articuloCotizacion=="BAÑOS") {
                     numeroBanos=numeroDeArticulos;
                     console.log("Usted a solicitado cotizar"+" "+numeroDeArticulos+" "+articuloCotizacion+".");
                     // variedad=variedad+1;
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
                 else if (articuloCotizacion=="ILUMINACION") {
                     numeroIluminacion=numeroDeArticulos;
                     console.log("Usted a solicitado cotizar"+" "+numeroDeArticulos+" "+articuloCotizacion+".");
                     // variedad=variedad+1;
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
                 else if (articuloCotizacion=="PISOS") {
                     numeroPisos=numeroDeArticulos;
                     console.log("Usted a solicitado cotizar"+" "+numeroDeArticulos+" "+articuloCotizacion+".");
                     // variedad=variedad+1;
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
                 else if (articuloCotizacion=="COCINAS") {
                     numeroCocinas=numeroDeArticulos;
                     console.log("Usted a solicitado cotizar"+" "+numeroDeArticulos+" "+articuloCotizacion+".");
                     // variedad=variedad+1;
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
                 else if (articuloCotizacion=="OFICINAS") {
                     numeroOficinas=numeroDeArticulos;
                     console.log("Usted a solicitado cotizar"+" "+numeroDeArticulos+" "+articuloCotizacion+".");
                     // variedad=variedad+1;
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
                 else if (articuloCotizacion=="FERRETERIA") {
                     numeroFerreteria=numeroDeArticulos;
                     console.log("Usted a solicitado cotizar"+" "+numeroDeArticulos+" "+articuloCotizacion+".");
                     // variedad=variedad+1;
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
                 else if (articuloCotizacion=="CONSTRUCCION") {
                     numeroConstruccion=numeroDeArticulos;
                     console.log("Usted a solicitado cotizar"+" "+numeroDeArticulos+" "+articuloCotizacion+".");
                     // variedad=variedad+1;
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
                 else if (articuloCotizacion=="EQUIPOS") {
                     numeroEquipos=numeroDeArticulos;
                     console.log("Usted a solicitado cotizar"+" "+numeroDeArticulos+" "+articuloCotizacion+".");
                     // variedad=variedad+1;
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
                 else { alert("Introduzca nombre valido del los articulos en mayusculas = "+nombreArticulos);
-                    // articuloCotizacion=prompt("Ingrese nombre de ariticulo que desea cotizar.");
+                    // articuloCotizacion=prompt("Ingrese nombre de articulo que desea cotizar.");
                 }
             }
         
@@ -302,21 +302,108 @@ function probarCodigo()
     
     function obtenerNumero1() {
         // Valor con class numeroArticulo1
-        let numeroArticuloCotizacion1 = document.getElementsById("numeroArticulo1").value;
-        // Si numeroAriticuloCotizacion1 no es un numero entero
+        let numeroArticuloCotizacion1;
+        numeroArticuloCotizacion1 = document.getElementById("numeroArticulo1").value;
+        numeroArticuloCotizacion1 = parseFloat(numeroArticuloCotizacion1);
+        // Si numeroArticuloCotizacion1 no es un numero entero
         let texto;
+        let precioTotalArticulo1;
         if (isNaN(numeroArticuloCotizacion1)) {
           texto = "No Valido";
-        } else if (Number.isInteger(numeroArticuloCotizacion1) && numeroArticuloCotizacion1>=0) {
-          texto = "Valido";
+          precioTotalArticulo1 = numeroArticuloCotizacion1 *10;
+        } else if (Number.isInteger(numeroArticuloCotizacion1) && numeroArticuloCotizacion1>=parseInt(0)) {
+          texto = "El costo de "+numeroArticuloCotizacion1+" baños es de "+numeroArticuloCotizacion1*10+" pesos.";
+        } else  {
+            texto = "Intente de nuevo";
         }
-        document.getElementsById("textoArticulo1").innerHTML = texto;
+        document.getElementById("textoArticulo1").innerHTML = texto;
     }
 
-    var input = document.getElementById("myInput");
+    var input = document.getElementById("numeroArticulo1");
     input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
             document.getElementById("botonArticulo1").click();
+        }
+    });
+
+    function obtenerNumero2() {
+        // Valor con class numeroArticulo2
+        let numeroArticuloCotizacion2;
+        numeroArticuloCotizacion2 = document.getElementById("numeroArticulo2").value;
+        numeroArticuloCotizacion2 = parseFloat(numeroArticuloCotizacion2);
+        // Si numeroArticuloCotizacion2 no es un numero entero
+        let texto;
+        let precioTotalArticulo2;
+        if (isNaN(numeroArticuloCotizacion2)) {
+          texto = "No Valido";
+          precioTotalArticulo2 = numeroArticuloCotizacion2 *20;
+        } else if (Number.isInteger(numeroArticuloCotizacion2) && numeroArticuloCotizacion2>=parseInt(0)) {
+          texto = "El costo de "+numeroArticuloCotizacion2+" iluminacion es de "+numeroArticuloCotizacion2*20+" pesos.";
+        } else  {
+            texto = "Intente de nuevo";
+        }
+        document.getElementById("textoArticulo2").innerHTML = texto;
+    }
+
+    var input = document.getElementById("numeroArticulo2");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("botonArticulo2").click();
+        }
+    });
+
+    function obtenerNumero3() {
+        // Valor con class numeroArticulo3
+        let numeroArticuloCotizacion3;
+        numeroArticuloCotizacion3 = document.getElementById("numeroArticulo3").value;
+        numeroArticuloCotizacion3 = parseFloat(numeroArticuloCotizacion3);
+        // Si numeroArticuloCotizacion3 no es un numero entero
+        let texto;
+        let precioTotalArticulo3;
+        if (isNaN(numeroArticuloCotizacion3)) {
+          texto = "No Valido";
+          precioTotalArticulo3 = numeroArticuloCotizacion3 *30;
+        } else if (Number.isInteger(numeroArticuloCotizacion3) && numeroArticuloCotizacion3>=parseInt(0)) {
+          texto = "El costo de "+numeroArticuloCotizacion3+" pisos es de "+numeroArticuloCotizacion3*30+" pesos.";
+        } else  {
+            texto = "Intente de nuevo";
+        }
+        document.getElementById("textoArticulo3").innerHTML = texto;
+    }
+
+    var input = document.getElementById("numeroArticulo3");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("botonArticulo3").click();
+        }
+    });
+
+    function obtenerNumero4() {
+        // Valor con class numeroArticulo4
+        let numeroArticuloCotizacion4;
+        numeroArticuloCotizacion4 = document.getElementById("numeroArticulo4").value;
+        numeroArticuloCotizacion4 = parseFloat(numeroArticuloCotizacion4);
+        // Si numeroArticuloCotizacion4 no es un numero entero
+        let texto;
+        let precioTotalArticulo4;
+        if (isNaN(numeroArticuloCotizacion4)) {
+          texto = "No Valido";
+          precioTotalArticulo4 = numeroArticuloCotizacion4 *40;
+        } else if (Number.isInteger(numeroArticuloCotizacion4) && numeroArticuloCotizacion4>=parseInt(0)) {
+          texto = "El costo de "+numeroArticuloCotizacion4+" cocinas es de "+numeroArticuloCotizacion4*40+" pesos.";
+        } else  {
+            texto = "Intente de nuevo";
+        }
+        document.getElementById("textoArticulo4").innerHTML = texto;
+    }
+
+    var input = document.getElementById("numeroArticulo4");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("botonArticulo4").click();
         }
     });
