@@ -299,15 +299,15 @@ function probarCodigo()
         producto1.mostrar();
         
     }
-    
-    function obtenerNumero1() {
+
+/*    function obtenerNumero1() {
         // Valor con class numeroArticulo1
         let numeroArticuloCotizacion1;
         numeroArticuloCotizacion1 = document.getElementById("numeroArticulo1").value;
         numeroArticuloCotizacion1 = parseFloat(numeroArticuloCotizacion1);
         // Si numeroArticuloCotizacion1 no es un numero entero
         let texto;
-        let precioTotalArticulo1;
+        // let precioTotalArticulo1;
         if (isNaN(numeroArticuloCotizacion1)) {
           texto = "No Valido";
           precioTotalArticulo1 = numeroArticuloCotizacion1 *10;
@@ -317,6 +317,8 @@ function probarCodigo()
             texto = "Intente de nuevo";
         }
         document.getElementById("textoArticulo1").innerHTML = texto;
+        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
     }
 
     var input = document.getElementById("numeroArticulo1");
@@ -334,7 +336,7 @@ function probarCodigo()
         numeroArticuloCotizacion2 = parseFloat(numeroArticuloCotizacion2);
         // Si numeroArticuloCotizacion2 no es un numero entero
         let texto;
-        let precioTotalArticulo2;
+        // let precioTotalArticulo2;
         if (isNaN(numeroArticuloCotizacion2)) {
           texto = "No Valido";
           precioTotalArticulo2 = numeroArticuloCotizacion2 *20;
@@ -344,6 +346,8 @@ function probarCodigo()
             texto = "Intente de nuevo";
         }
         document.getElementById("textoArticulo2").innerHTML = texto;
+        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
     }
 
     var input = document.getElementById("numeroArticulo2");
@@ -361,16 +365,18 @@ function probarCodigo()
         numeroArticuloCotizacion3 = parseFloat(numeroArticuloCotizacion3);
         // Si numeroArticuloCotizacion3 no es un numero entero
         let texto;
-        let precioTotalArticulo3;
+        // let precioTotalArticulo3;
         if (isNaN(numeroArticuloCotizacion3)) {
           texto = "No Valido";
-          precioTotalArticulo3 = numeroArticuloCotizacion3 *30;
+        precioTotalArticulo3 = numeroArticuloCotizacion3 *30;
         } else if (Number.isInteger(numeroArticuloCotizacion3) && numeroArticuloCotizacion3>=parseInt(0)) {
           texto = "El costo de "+numeroArticuloCotizacion3+" pisos es de "+numeroArticuloCotizacion3*30+" pesos.";
         } else  {
             texto = "Intente de nuevo";
         }
         document.getElementById("textoArticulo3").innerHTML = texto;
+        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
     }
 
     var input = document.getElementById("numeroArticulo3");
@@ -388,17 +394,127 @@ function probarCodigo()
         numeroArticuloCotizacion4 = parseFloat(numeroArticuloCotizacion4);
         // Si numeroArticuloCotizacion4 no es un numero entero
         let texto;
-        let precioTotalArticulo4;
+        // let precioTotalArticulo4;
         if (isNaN(numeroArticuloCotizacion4)) {
           texto = "No Valido";
-          precioTotalArticulo4 = numeroArticuloCotizacion4 *40;
+        precioTotalArticulo4 = numeroArticuloCotizacion4 *40;
         } else if (Number.isInteger(numeroArticuloCotizacion4) && numeroArticuloCotizacion4>=parseInt(0)) {
           texto = "El costo de "+numeroArticuloCotizacion4+" cocinas es de "+numeroArticuloCotizacion4*40+" pesos.";
         } else  {
             texto = "Intente de nuevo";
         }
         document.getElementById("textoArticulo4").innerHTML = texto;
+        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
     }
+
+    var input = document.getElementById("numeroArticulo4");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("botonArticulo4").click();
+        }
+    });*/
+
+    function obtenerNumero() {
+        let precioTotalArticulo1;
+        let precioTotalArticulo2;
+        let precioTotalArticulo3;
+        let precioTotalArticulo4;
+        let precioTotalTodosLosArticulos;
+
+        numeroArticuloCotizacion = document.getElementById("numeroArticulo1").value;
+        numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
+        let texto;
+        if (isNaN(numeroArticuloCotizacion)) {
+          texto = "No Valido";
+          precioTotalArticulo1=0;
+        } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
+          texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*10+" pesos.";
+          precioTotalArticulo1=numeroArticuloCotizacion*10;
+        } else  {
+            texto = "Intente de nuevo";
+        }
+        document.getElementById("textoArticulo1").innerHTML = texto;
+        precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
+
+
+        numeroArticuloCotizacion = document.getElementById("numeroArticulo2").value;
+        numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
+        if (isNaN(numeroArticuloCotizacion)) {
+          texto = "No Valido";
+          precioTotalArticulo2=0;
+        } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
+          texto = "El costo de "+numeroArticuloCotizacion+" iluminacion es de "+numeroArticuloCotizacion*20+" pesos.";
+          precioTotalArticulo2=numeroArticuloCotizacion*20;
+        } else  {
+            texto = "Intente de nuevo";
+        }
+        document.getElementById("textoArticulo2").innerHTML = texto;
+        precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
+
+
+        numeroArticuloCotizacion = document.getElementById("numeroArticulo3").value;
+        numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
+        if (isNaN(numeroArticuloCotizacion)) {
+          texto = "No Valido";
+        precioTotalArticulo3=0;
+        } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
+          texto = "El costo de "+numeroArticuloCotizacion+" pisos es de "+numeroArticuloCotizacion*30+" pesos.";
+          precioTotalArticulo3=numeroArticuloCotizacion*30;
+        } else  {
+            texto = "Intente de nuevo";
+        }
+        document.getElementById("textoArticulo3").innerHTML = texto;
+        precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
+
+
+        numeroArticuloCotizacion = document.getElementById("numeroArticulo4").value;
+        numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
+        if (isNaN(numeroArticuloCotizacion)) {
+          texto = "No Valido";
+        precioTotalArticulo4=0;
+        } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
+          texto = "El costo de "+numeroArticuloCotizacion+" cocinas es de "+numeroArticuloCotizacion*40+" pesos.";
+          precioTotalArticulo4=numeroArticuloCotizacion*40;
+        } else  {
+            texto = "Intente de nuevo";
+        }
+        document.getElementById("textoArticulo4").innerHTML = texto;
+        precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
+    }
+
+    var input = document.getElementById("numeroArticulo1");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("botonArticulo1").click();
+        }
+    });
+
+    var input = document.getElementById("numeroArticulo2");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("botonArticulo2").click();
+        }
+    });
+
+    var input = document.getElementById("numeroArticulo3");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("botonArticulo3").click();
+        }
+    });
 
     var input = document.getElementById("numeroArticulo4");
     input.addEventListener("keypress", function(event) {
