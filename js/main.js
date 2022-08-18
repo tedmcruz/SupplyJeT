@@ -299,3 +299,24 @@ function probarCodigo()
         producto1.mostrar();
         
     }
+    
+    function obtenerNumero1() {
+        // Valor con class numeroArticulo1
+        let numeroArticuloCotizacion1 = document.getElementsById("numeroArticulo1").value;
+        // Si numeroAriticuloCotizacion1 no es un numero entero
+        let texto;
+        if (isNaN(numeroArticuloCotizacion1)) {
+          texto = "No Valido";
+        } else if (Number.isInteger(numeroArticuloCotizacion1) && numeroArticuloCotizacion1>=0) {
+          texto = "Valido";
+        }
+        document.getElementsById("textoArticulo1").innerHTML = texto;
+    }
+
+    var input = document.getElementById("myInput");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("botonArticulo1").click();
+        }
+    });
