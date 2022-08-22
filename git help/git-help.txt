@@ -35,3 +35,8 @@ npm run build-sass = to create and link "css\traslated.css" file to "sass\index.
 "watch-sass": "nodemon -e scss -x \"npm run build-sass\"" = "script to write under "build-sass" on "package.json" file.
 npm run watch-sass = to run script continiously and update "css\translated.css"file automatically.
 press "CTRL" + "c" on terminal = to stop watch-sass
+
+
+
+
+"addingEventsAndFixingSyntax"

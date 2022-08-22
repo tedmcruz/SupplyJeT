@@ -417,6 +417,18 @@ function probarCodigo()
     });*/
 
     function obtenerNumero() {
+        const Productos = [
+            {nombreDeProducto: "BAÑOS", precioDeProducto:10},
+            {nombreDeProducto: "ILUMINACION", precioDeProducto: 20},
+            {nombreDeProducto: "PISOS", precioDeProducto: 30},
+            {nombreDeProducto: "COCINAS", precioDeProducto: 40},
+            {nombreDeProducto: "OFICINAS", precioDeProducto: 50},
+            {nombreDeProducto: "FERRETERIA", precioDeProducto: 60},
+            {nombreDeProducto: "CONSTRUCCION", precioDeProducto: 70},
+            {nombreDeProducto: "EQUIPOS", precioDeProducto: 80}
+
+        ];
+
         let precioTotalArticulo1;
         let precioTotalArticulo2;
         let precioTotalArticulo3;
