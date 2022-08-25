@@ -439,10 +439,35 @@ function probarCodigo()
         {nombreDeProducto: "EQUIPOS", precioDeProducto: 80, descripcionDeProducto: "Este es un producto de calidad."}
     ];
 
-    let botonRegistro =document.getElementById("botonArticulo");
-        botonRegistro.onclick=()=>{
+    let botonRegistro1 =document.getElementById("botonArticulo1");
+        botonRegistro1.onclick = () =>{
         obtenerNumero();
-        }
+        };
+    
+    let botonRegistro2 =document.getElementById("botonArticulo2");
+        botonRegistro2.onclick = () =>{
+        obtenerNumero();
+        };
+
+    let botonRegistro3 =document.getElementById("botonArticulo3");
+        botonRegistro3.onclick = () =>{
+        obtenerNumero();
+        };
+
+    let botonRegistro4 =document.getElementById("botonArticulo4");
+        botonRegistro4.onclick = () =>{
+        obtenerNumero();
+        };
+    
+    document.getElementById("cargador").onload = function() {cargarArchivos()};
+
+    function cargarArchivos(){     
+        document.getElementById("numeroArticulo1").value=parseInt(JSON.parse(localStorage.getItem(numeroArticulo1)));
+        document.getElementById("numeroArticulo2").value=parseInt(JSON.parse(localStorage.getItem(numeroArticulo2)));
+        document.getElementById("numeroArticulo3").value=parseInt(JSON.parse(localStorage.getItem(numeroArticulo3)));
+        document.getElementById("numeroArticulo4").value=parseInt(JSON.parse(localStorage.getItem(numeroArticulo4)));
+        console.log("EXITO");
+    }
 
     function obtenerNumero() {
 
@@ -468,7 +493,8 @@ function probarCodigo()
             precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroArticulo1",JSON.stringify(numeroArticuloCotizacion))
+            localStorage.setItem("numeroArticulo1",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("textoArticulo1",JSON.stringify(texto));
 
 
             numeroArticuloCotizacion = document.getElementById("numeroArticulo2").value;
@@ -486,7 +512,8 @@ function probarCodigo()
             precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroArticulo2",JSON.stringify(numeroArticuloCotizacion))
+            localStorage.setItem("numeroArticulo2",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("textoArticulo2",JSON.stringify(texto));
 
 
             numeroArticuloCotizacion = document.getElementById("numeroArticulo3").value;
@@ -504,7 +531,8 @@ function probarCodigo()
             precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroArticulo3",JSON.stringify(numeroArticuloCotizacion))
+            localStorage.setItem("numeroArticulo3",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("textoArticulo3",JSON.stringify(texto));
 
 
             numeroArticuloCotizacion = document.getElementById("numeroArticulo4").value;
@@ -522,7 +550,8 @@ function probarCodigo()
             precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroArticulo4",JSON.stringify(numeroArticuloCotizacion))
+            localStorage.setItem("numeroArticulo4",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("textoArticulo4",JSON.stringify(texto));
 
         }
 
@@ -530,7 +559,7 @@ function probarCodigo()
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementById("botonArticulo").click();
+                document.getElementsByClassName("botonArticulo").onclick();
             }
         });
 
@@ -538,7 +567,7 @@ function probarCodigo()
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementById("botonArticulo").click();
+                document.getElementsByClassName("botonArticulo").onclick();
             }
         });
 
@@ -546,7 +575,7 @@ function probarCodigo()
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementById("botonArticulo").click();
+                document.getElementsByClassName("botonArticulo").onclick();
             }
         });
 
@@ -554,6 +583,7 @@ function probarCodigo()
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementById("botonArticulo").click();
+                document.getElementsByClassName("botonArticulo").onclick();
             }
     });
+
