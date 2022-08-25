@@ -459,13 +459,19 @@ function probarCodigo()
         obtenerNumero();
         };
     
+    // document.getElementById("myFrame").onload = function() {myFunction()};
+
+    // function myFunction() {
+    //     document.getElementById("demo").innerHTML = "Iframe is loaded.";
+    // }
+
     document.getElementById("cargador").onload = function() {cargarArchivos()};
 
     function cargarArchivos(){     
-        document.getElementById("numeroArticulo1").value=parseInt(JSON.parse(localStorage.getItem(numeroArticulo1)));
-        document.getElementById("numeroArticulo2").value=parseInt(JSON.parse(localStorage.getItem(numeroArticulo2)));
-        document.getElementById("numeroArticulo3").value=parseInt(JSON.parse(localStorage.getItem(numeroArticulo3)));
-        document.getElementById("numeroArticulo4").value=parseInt(JSON.parse(localStorage.getItem(numeroArticulo4)));
+        document.getElementById("numeroArticulo1").value=parseInt("25") /* parseInt(JSON.parse(localStorage.getItem(numeroArticulo1)))*/;
+        document.getElementById("numeroArticulo2").value=parseInt("25") /* parseInt(JSON.parse(localStorage.getItem(numeroArticulo2)))*/;
+        document.getElementById("numeroArticulo3").value=parseInt("25") /* parseInt(JSON.parse(localStorage.getItem(numeroArticulo3)))*/;
+        document.getElementById("numeroArticulo4").value=parseInt("25") /* parseInt(JSON.parse(localStorage.getItem(numeroArticulo4)))*/;
         console.log("EXITO");
     }
 
