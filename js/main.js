@@ -458,12 +458,6 @@ function probarCodigo()
         botonRegistro4.onclick = () =>{
         obtenerNumero();
         };
-    
-    // document.getElementById("myFrame").onload = function() {myFunction()};
-
-    // function myFunction() {
-    //     document.getElementById("demo").innerHTML = "Iframe is loaded.";
-    // }
 
     document.getElementById("cargador").onload = function() {cargarArchivos()};
 
