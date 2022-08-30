@@ -461,16 +461,27 @@ function probarCodigo()
         obtenerNumero();
         };
     */
+        /*
+        document.getElementById("myFrame").addEventListener("load", myFunction);
 
-    document.getElementById("cargador").onload = function() {cargarArchivos()};
+        function myFunction() {
+          document.getElementById("demo").innerHTML = "Iframe is loaded.";
+        }
+        */
 
-    function cargarArchivos(){     
-        document.getElementById("numeroArticulo1").value=parseInt("25") /* parseInt(JSON.parse(localStorage.getItem(numeroArticulo1)))*/;
-        document.getElementById("numeroArticulo2").value=parseInt("25") /* parseInt(JSON.parse(localStorage.getItem(numeroArticulo2)))*/;
-        document.getElementById("numeroArticulo3").value=parseInt("25") /* parseInt(JSON.parse(localStorage.getItem(numeroArticulo3)))*/;
-        document.getElementById("numeroArticulo4").value=parseInt("25") /* parseInt(JSON.parse(localStorage.getItem(numeroArticulo4)))*/;
-        console.log("EXITO");
-    }
+    // document.getElementById("cargador").addEventListener = ("load",cargarArchivos);
+    // let numeroGuardado1;
+    // let numeroGuardado2;
+    // let numeroGuardado3;
+    // let numeroGuardado4;
+
+    // function cargarArchivos() {     
+    document.getElementById("numeroArticulo1").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado1")));
+    document.getElementById("numeroArticulo2").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado2")));
+    document.getElementById("numeroArticulo3").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado3")));
+    document.getElementById("numeroArticulo4").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado4")));
+    // console.log("EXITO");
+    // };
 
     function obtenerNumero() {
 
@@ -496,7 +507,7 @@ function probarCodigo()
             precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroArticulo1",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("numeroGuardado1",JSON.stringify(numeroArticuloCotizacion));
             localStorage.setItem("textoArticulo1",JSON.stringify(texto));
 
 
@@ -515,7 +526,7 @@ function probarCodigo()
             precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroArticulo2",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("numeroGuardado2",JSON.stringify(numeroArticuloCotizacion));
             localStorage.setItem("textoArticulo2",JSON.stringify(texto));
 
 
@@ -534,7 +545,7 @@ function probarCodigo()
             precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroArticulo3",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("numeroGuardado3",JSON.stringify(numeroArticuloCotizacion));
             localStorage.setItem("textoArticulo3",JSON.stringify(texto));
 
 
@@ -553,7 +564,7 @@ function probarCodigo()
             precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroArticulo4",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("numeroGuardado4",JSON.stringify(numeroArticuloCotizacion));
             localStorage.setItem("textoArticulo4",JSON.stringify(texto));
 
         }
