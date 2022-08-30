@@ -429,14 +429,14 @@ function probarCodigo()
 
 
     const productos = [
-        {nombreDeProducto: "BAÑOS", precioDeProducto: 10, descripcionDeProducto: "Este es un producto de calidad."},
-        {nombreDeProducto: "ILUMINACION", precioDeProducto: 20, descripcionDeProducto: "Este es un producto de calidad."},
-        {nombreDeProducto: "PISOS", precioDeProducto: 30, descripcionDeProducto: "Este es un producto de calidad."},
-        {nombreDeProducto: "COCINAS", precioDeProducto: 40, descripcionDeProducto: "Este es un producto de calidad."},
-        {nombreDeProducto: "OFICINAS", precioDeProducto: 50, descripcionDeProducto: "Este es un producto de calidad."},
-        {nombreDeProducto: "FERRETERIA", precioDeProducto: 60, descripcionDeProducto: "Este es un producto de calidad."},
-        {nombreDeProducto: "CONSTRUCCION", precioDeProducto: 70, descripcionDeProducto: "Este es un producto de calidad."},
-        {nombreDeProducto: "EQUIPOS", precioDeProducto: 80, descripcionDeProducto: "Este es un producto de calidad."}
+        {id: 1, nombreDeProducto: "BAÑOS", precioDeProducto: 10, descripcionDeProducto: "Este es un producto de calidad."},
+        {id: 2, nombreDeProducto: "ILUMINACION", precioDeProducto: 20, descripcionDeProducto: "Este es un producto de calidad."},
+        {id: 3, nombreDeProducto: "PISOS", precioDeProducto: 30, descripcionDeProducto: "Este es un producto de calidad."},
+        {id: 4, nombreDeProducto: "COCINAS", precioDeProducto: 40, descripcionDeProducto: "Este es un producto de calidad."},
+        {id: 5, nombreDeProducto: "OFICINAS", precioDeProducto: 50, descripcionDeProducto: "Este es un producto de calidad."},
+        {id: 6, nombreDeProducto: "FERRETERIA", precioDeProducto: 60, descripcionDeProducto: "Este es un producto de calidad."},
+        {id: 7, nombreDeProducto: "CONSTRUCCION", precioDeProducto: 70, descripcionDeProducto: "Este es un producto de calidad."},
+        {id: 8, nombreDeProducto: "EQUIPOS", precioDeProducto: 80, descripcionDeProducto: "Este es un producto de calidad."}
     ];
 
     let botonRegistro;
@@ -482,6 +482,16 @@ function probarCodigo()
     document.getElementById("numeroArticulo4").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado4")));
     // console.log("EXITO");
     // };
+   
+    //console.log(myArray[index].name);  // Prints: Peter
+
+    let productoGenerico = document.getElementsByClassName("cotizaciones__name");
+    for (let numeroDeProductosGenericos = 0; numeroDeProductosGenericos < productoGenerico.length; numeroDeProductosGenericos++) {
+    let indice=productos.findIndex(productos => productos.id === numeroDeProductosGenericos+1);
+    productoGenerico[numeroDeProductosGenericos].innerHTML = JSON.stringify(productos[indice].nombreDeProducto);
+    }
+
+
 
     function obtenerNumero() {
 
@@ -494,6 +504,7 @@ function probarCodigo()
             numeroArticuloCotizacion = document.getElementById("numeroArticulo1").value;
             numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
             let texto;
+            let articulo;
             if (isNaN(numeroArticuloCotizacion)) {
             texto = "No Valido";
             precioTotalArticulo1=0;
