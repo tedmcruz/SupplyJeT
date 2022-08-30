@@ -482,15 +482,14 @@ function probarCodigo()
     document.getElementById("numeroArticulo4").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado4")));
     // console.log("EXITO");
     // };
-   
-    //console.log(myArray[index].name);  // Prints: Peter
 
     let productoGenerico = document.getElementsByClassName("cotizaciones__name");
     for (let numeroDeProductosGenericos = 0; numeroDeProductosGenericos < productoGenerico.length; numeroDeProductosGenericos++) {
     let indice=productos.findIndex(productos => productos.id === numeroDeProductosGenericos+1);
-    productoGenerico[numeroDeProductosGenericos].innerHTML = JSON.stringify(productos[indice].nombreDeProducto);
+    let productoConComillas=JSON.stringify(productos[indice].nombreDeProducto);
+    let productoSinComillas=productoConComillas.replaceAll('"','');
+    productoGenerico[numeroDeProductosGenericos].innerHTML = productoSinComillas;
     }
-
 
 
     function obtenerNumero() {
