@@ -439,11 +439,13 @@ function probarCodigo()
         {nombreDeProducto: "EQUIPOS", precioDeProducto: 80, descripcionDeProducto: "Este es un producto de calidad."}
     ];
 
-    let botonRegistro1 =document.getElementById("botonArticulo1");
-        botonRegistro1.onclick = () =>{
+    let botonRegistro;
+        botonRegistro=document.getElementById("botonCoticacionesArticulos");
+        botonRegistro.onclick = () =>{
         obtenerNumero();
         };
     
+    /*
     let botonRegistro2 =document.getElementById("botonArticulo2");
         botonRegistro2.onclick = () =>{
         obtenerNumero();
@@ -458,6 +460,7 @@ function probarCodigo()
         botonRegistro4.onclick = () =>{
         obtenerNumero();
         };
+    */
 
     document.getElementById("cargador").onload = function() {cargarArchivos()};
 
@@ -559,7 +562,7 @@ function probarCodigo()
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementsByClassName("botonArticulo").onclick();
+                document.getElementById("botonCoticacionesArticulos").onclick();
             }
         });
 
@@ -567,7 +570,7 @@ function probarCodigo()
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementsByClassName("botonArticulo").onclick();
+                document.getElementById("botonCoticacionesArticulos").onclick();
             }
         });
 
@@ -575,7 +578,7 @@ function probarCodigo()
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementsByClassName("botonArticulo").onclick();
+                document.getElementById("botonCoticacionesArticulos").onclick();
             }
         });
 
@@ -583,7 +586,7 @@ function probarCodigo()
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementsByClassName("botonArticulo").onclick();
+                document.getElementById("botonCoticacionesArticulos").onclick();
             }
     });
 
