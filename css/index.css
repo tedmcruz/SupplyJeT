@@ -238,6 +238,8 @@ footer {
   list-style-type: none;
   height: 18rem;
   width: 18rem;
+  min-height: 18rem;
+  min-width: 18rem;
   border-style: solid;
   padding: 0.6rem;
   border-width: 0.3rem;
@@ -411,7 +413,9 @@ footer {
   .nosotros {
     margin: auto;
     width: auto;
-    grid-template-areas: "p h3" ". ."  "h4 p1";
+    grid-template-areas: "p h3"
+ ". ." 
+ "h4 p1";
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem; } }
 

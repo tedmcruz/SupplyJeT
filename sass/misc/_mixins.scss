@@ -3,7 +3,7 @@
     width: $width;
 }
 
-@mixin minimum-size($width, $height) {
-    min-height: $height;
-    min-width: $width;
+@mixin minimum-size($minwidth, $minheight) {
+    min-height: $minheight;
+    min-width: $minwidth;
 }
