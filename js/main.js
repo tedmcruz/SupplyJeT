@@ -582,7 +582,7 @@ function probarCodigo()
             localStorage.setItem("numeroGuardado4",JSON.stringify(numeroArticuloCotizacion));
             localStorage.setItem("textoArticulo4",JSON.stringify(texto));
 
-        }
+        };
 
         var input = document.getElementById("numeroArticulo1");
         input.addEventListener("keypress", function(event) {
@@ -591,7 +591,7 @@ function probarCodigo()
                 document.getElementById("botonCoticacionesArticulos").onclick();
             }
         });
-
+        
         var input = document.getElementById("numeroArticulo2");
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
@@ -615,4 +615,3 @@ function probarCodigo()
                 document.getElementById("botonCoticacionesArticulos").onclick();
             }
     });
-
