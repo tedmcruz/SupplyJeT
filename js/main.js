@@ -486,10 +486,15 @@ function probarCodigo()
     let productoGenerico = document.getElementsByClassName("cotizaciones__name");
     for (let numeroDeProductosGenericos = 0; numeroDeProductosGenericos < productoGenerico.length; numeroDeProductosGenericos++) {
     let indice=productos.findIndex(productos => productos.id === numeroDeProductosGenericos+1);
-    let productoConComillas=JSON.stringify(productos[indice].nombreDeProducto);
-    let productoSinComillas=productoConComillas.replaceAll('"','');
-    productoGenerico[numeroDeProductosGenericos].innerHTML = productoSinComillas;
+    let nombreDeProductoGenerico=eliminarComillas(JSON.stringify(productos[indice].nombreDeProducto));
+    productoGenerico[numeroDeProductosGenericos].innerHTML = nombreDeProductoGenerico;
     }
+
+    function eliminarComillas(palabraConComillas) {
+        let palabraSinComillas;
+        palabraSinComillas=palabraConComillas.replaceAll('"','');
+        return palabraSinComillas;
+    };
 
 
     function obtenerNumero() {
