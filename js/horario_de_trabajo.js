@@ -1,3 +1,9 @@
+var horaActual=document.getElementById("reloj");
+
 var diaHora = luxon.DateTime;
 
-var horaActual = diaHora.local();
+function refrescarHora() {
+horaActual.innerHTML = diaHora.local().toFormat("hh:mm:ss a");
+};
+
+setInterval(refrescarHora, 1000);
