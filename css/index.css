@@ -48,6 +48,11 @@ section.login {
   margin: 2rem;
   max-width: 14rem; }
 
+section.tiempo {
+  display: flex;
+  justify-content: right;
+  max-width: 120rem; }
+
 /* PARTIAL */
 /* TOP SCREEN */
 header {
