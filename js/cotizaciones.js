@@ -53,7 +53,7 @@ function obtenerNumero() {
         texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*10+" pesos.";
         precioTotalArticulo1=numeroArticuloCotizacion*10;
         } else  {
-            texto = "Intente de nuevo";
+            texto = "El numero tiene que ser positivo y entero.";
         }
         document.getElementById("textoArticulo1").innerHTML = texto;
         precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
@@ -72,7 +72,7 @@ function obtenerNumero() {
         texto = "El costo de "+numeroArticuloCotizacion+" iluminacion es de "+numeroArticuloCotizacion*20+" pesos.";
         precioTotalArticulo2=numeroArticuloCotizacion*20;
         } else  {
-            texto = "Intente de nuevo";
+            texto = "El numero tiene que ser positivo y entero.";
         }
         document.getElementById("textoArticulo2").innerHTML = texto;
         precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
@@ -91,7 +91,7 @@ function obtenerNumero() {
         texto = "El costo de "+numeroArticuloCotizacion+" pisos es de "+numeroArticuloCotizacion*30+" pesos.";
         precioTotalArticulo3=numeroArticuloCotizacion*30;
         } else  {
-            texto = "Intente de nuevo";
+            texto = "El numero tiene que ser positivo y entero.";
         }
         document.getElementById("textoArticulo3").innerHTML = texto;
         precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
@@ -110,7 +110,7 @@ function obtenerNumero() {
         texto = "El costo de "+numeroArticuloCotizacion+" cocinas es de "+numeroArticuloCotizacion*40+" pesos.";
         precioTotalArticulo4=numeroArticuloCotizacion*40;
         } else  {
-            texto = "Intente de nuevo";
+            texto = "El numero tiene que ser positivo y entero.";
         }
         document.getElementById("textoArticulo4").innerHTML = texto;
         precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
