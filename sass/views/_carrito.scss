@@ -29,6 +29,7 @@
     justify-content: center;
     list-style-type: none;
     @include sizes (18rem,18rem);
+    @include minimum-size(18rem,18rem);
     border-style: solid;
     padding: 0.6rem;
     border-width: 0.3rem;

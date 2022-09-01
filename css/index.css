@@ -366,6 +366,8 @@ footer {
   list-style-type: none;
   height: 18rem;
   width: 18rem;
+  min-height: 18rem;
+  min-width: 18rem;
   border-style: solid;
   padding: 0.6rem;
   border-width: 0.3rem;
