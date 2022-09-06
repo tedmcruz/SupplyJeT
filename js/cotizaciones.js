@@ -12,11 +12,11 @@
 
 const lista = document.querySelector('#listado')
 
-fetch('../data.json')
+fetch('../js/datos.json')
     .then( (res) => res.json())
-    .then ( (data) => {
+    .then ( (datos) => {
 
-        data.forEach((producto) => {
+        datos.forEach((producto) => {
             const li = document.createElement('li')
             li.innerHTML = `         
                     <h3>${producto.nombreDeProducto}</h3>
