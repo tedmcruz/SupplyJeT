@@ -40,3 +40,11 @@ press "CTRL" + "c" on terminal = to stop watch-sass
 
 
 "addingEventsAndFixingSyntax"
+
+To allow fetch() to work on javescript with local files, you have to run : "npm install -g http-server" , this will allow you to install a local server to allow fetch. 
+    Then simply run http-server in any of your project directories:
+        d:\my_project> http-server
+        
+        or
+
+        http-server "d:\my_project"

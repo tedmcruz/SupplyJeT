@@ -1,4 +1,4 @@
-const productos = [
+/*const productos = [
     {id: 1, nombreDeProducto: "BAÑOS", precioDeProducto: 10, descripcionDeProducto: "Este es un producto de calidad."},
     {id: 2, nombreDeProducto: "ILUMINACION", precioDeProducto: 20, descripcionDeProducto: "Este es un producto de calidad."},
     {id: 3, nombreDeProducto: "PISOS", precioDeProducto: 30, descripcionDeProducto: "Este es un producto de calidad."},
@@ -8,29 +8,27 @@ const productos = [
     {id: 7, nombreDeProducto: "CONSTRUCCION", precioDeProducto: 70, descripcionDeProducto: "Este es un producto de calidad."},
     {id: 8, nombreDeProducto: "EQUIPOS", precioDeProducto: 80, descripcionDeProducto: "Este es un producto de calidad."}
     ];
+*/
 
 const lista = document.querySelector('#listado')
 
-fetch('/datos.json')
-    .then( (respuesta) => respuesta.json())
-    .then ( (datos) => {
+fetch('../data.json')
+    .then( (res) => res.json())
+    .then ( (data) => {
 
-        datos.forEach((producto) => {
-            const listado = document.createElement('listado')
-            listado.innerHTML = `
-                  
+        data.forEach((producto) => {
+            const li = document.createElement('li')
+            li.innerHTML = `         
                     <h3>${producto.nombreDeProducto}</h3>
                     <p>${producto.precioDeProducto}</p>
                     <p>Codigo: ${producto.id}</p>
                     <hr/>
-                
-                
-
                 `
 
             lista.append(li)
         })
     })
+
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCoticacionesArticulos");
@@ -43,12 +41,14 @@ document.getElementById("numeroArticulo2").value=parseInt(JSON.parse(localStorag
 document.getElementById("numeroArticulo3").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado3")));
 document.getElementById("numeroArticulo4").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado4")));
 
+/*
 let productoGenerico = document.getElementsByClassName("cotizaciones__name");
 for (let numeroDeProductosGenericos = 0; numeroDeProductosGenericos < productoGenerico.length; numeroDeProductosGenericos++) {
 let indice=productos.findIndex(productos => productos.id === numeroDeProductosGenericos+1);
 let nombreDeProductoGenerico=eliminarComillas(JSON.stringify(productos[indice].nombreDeProducto));
 productoGenerico[numeroDeProductosGenericos].innerHTML = nombreDeProductoGenerico;
 }
+*/
 
 function eliminarComillas(palabraConComillas) {
     let palabraSinComillas;
