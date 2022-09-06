@@ -9,29 +9,6 @@ const productos = [
     {id: 8, nombreDeProducto: "EQUIPOS", precioDeProducto: 80, descripcionDeProducto: "Este es un producto de calidad."}
     ];
 
-const lista = document.querySelector('#listado')
-
-fetch('/datos.json')
-    .then( (respuesta) => respuesta.json())
-    .then ( (datos) => {
-
-        datos.forEach((producto) => {
-            const listado = document.createElement('listado')
-            listado.innerHTML = `
-                  
-                    <h3>${producto.nombreDeProducto}</h3>
-                    <p>${producto.precioDeProducto}</p>
-                    <p>Codigo: ${producto.id}</p>
-                    <hr/>
-                
-                
-
-                `
-
-            lista.append(li)
-        })
-    })
-
 let botonRegistro;
     botonRegistro=document.getElementById("botonCoticacionesArticulos");
     botonRegistro.onclick = () =>{
