@@ -24,7 +24,7 @@ fetch('../js/datos.json')
                     <p>Codigo: ${producto.id}</p>
                     <hr/>
                 `
-            lista.classList.add('cotizaciones__item')
+            li.classList.add('cotizaciones__item')
             lista.append(li)
         })
     })
