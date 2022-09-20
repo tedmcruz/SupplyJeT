@@ -28,7 +28,6 @@ fetch('../js/datos.json')
                     <input class="eventoEnter" type="number" placeholder="0">
                     </div>
                     <p class="precioArticulo">${producto.precioDeProducto}</p>
-                    <hr/>
                 `
             li.classList.add('cotizaciones__item');
             lista.append(li);
