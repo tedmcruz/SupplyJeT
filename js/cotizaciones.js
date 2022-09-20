@@ -19,13 +19,15 @@ fetch('../js/datos.json')
         datos.forEach((producto) => {
             const li = document.createElement('li')
             li.innerHTML = `
+                    <img src="..\images\bathrooms.jpg" class="cotizaciones__imagenes" alt="baños">
                     <div class="cotizaciones__text">         
                     <h3 class="cotizaciones__name">${producto.nombreDeProducto}</h3>
                     <p class="cotizaciones__descripcion">Descripcion: ${producto.descripcionDeProducto}</p>
                     </div>
                     <div class="cotizaciones_precio">
-
+                    <input class="eventoEnter" type="number" placeholder="0">
                     </div>
+                    <p class="precioArticulo">${producto.precioDeProducto}</p>
                     <hr/>
                 `
             li.classList.add('cotizaciones__item');
