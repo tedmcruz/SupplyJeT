@@ -19,7 +19,7 @@ fetch('../js/datos.json')
         datos.forEach((producto) => {
             const li = document.createElement('li')
             li.innerHTML = `
-                    <img src="bathrooms.jpg" class="cotizaciones__imagenes" alt="baños">
+                    <img ${producto.imagenDeProducto} class="cotizaciones__imagenes" alt="baños">
                     <div class="cotizaciones__text">         
                     <h3 class="cotizaciones__name">${producto.nombreDeProducto}</h3>
                     <p class="cotizaciones__descripcion">Descripcion: ${producto.descripcionDeProducto}</p>
@@ -33,7 +33,7 @@ fetch('../js/datos.json')
             lista.append(li);
         })
     })
-
+// src="..\images\bathrooms.jpg"
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCoticacionesArticulos");

@@ -1,5 +1,5 @@
 [
-    {"id": 1, "nombreDeProducto": "BAÑOS", "precioDeProducto": 10, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"image"},
+    {"id": 1, "nombreDeProducto": "BAÑOS", "precioDeProducto": 10, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"src=..\\images\\bathrooms.jpg"},
     {"id": 2, "nombreDeProducto": "ILUMINACION", "precioDeProducto": 20, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"image"},
     {"id": 3, "nombreDeProducto": "PISOS", "precioDeProducto": 30, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"image"},
     {"id": 4, "nombreDeProducto": "COCINAS", "precioDeProducto": 40, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"image"},
