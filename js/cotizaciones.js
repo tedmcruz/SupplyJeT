@@ -33,7 +33,6 @@ fetch('../js/datos.json')
             lista.append(li);
         })
     })
-// src="..\images\bathrooms.jpg"
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCoticacionesArticulos");
