@@ -34,6 +34,17 @@ fetch('../js/datos.json')
         })
     })
 
+function crearVariablesDeArticulos(){
+    var numeroDeArticulo = [];
+    var cantidadTotalDeArticulos=datos.length;
+    for (var idDeArticulo = 0; idDeArticulo <= cantidadTotalDeArticulos; ++idDeArticulo) {
+        numeroDeArticulo[idDeArticulo] = idDeArticulo;
+    }
+    
+    console.log(numeroDeArticulo);
+    return numeroDeArticulo;
+    }
+
 let botonRegistro;
     botonRegistro=document.getElementById("botonCoticacionesArticulos");
     botonRegistro.onclick = () =>{
