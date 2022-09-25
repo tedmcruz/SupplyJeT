@@ -39,6 +39,7 @@ fetch('../js/datos.json')
         })
     })
 
+/*
 function crearVariablesDeArticulos(){
     var numeroDeArticulo = [];
     var cantidadTotalDeArticulos=datos.length;
@@ -49,6 +50,7 @@ function crearVariablesDeArticulos(){
     console.log(numeroDeArticulo);
     return numeroDeArticulo;
     }
+*/
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCoticacionesArticulos");
