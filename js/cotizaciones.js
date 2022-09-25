@@ -25,9 +25,9 @@ fetch('../js/datos.json')
                     <p class="cotizaciones__descripcion">Descripcion: ${producto.descripcionDeProducto}</p>
                     </div>
                     <div class="cotizaciones_precio">
-                    <input class="eventoEnter" type="number" placeholder="0">
+                    <input id="numeroArticulo${producto.idDeProducto}" class="eventoEnter" type="number" placeholder="0">
                     </div>
-                    <p class="precioArticulo">${producto.precioDeProducto}</p>
+                    <p id="textoArticulo${producto.idDeProducto}" class="precioArticulo">${producto.precioDeProducto}</p>
                 `
             li.classList.add('cotizaciones__item');
             lista.append(li);
