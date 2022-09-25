@@ -1,15 +1,3 @@
-/*const productos = [
-    {id: 1, nombreDeProducto: "BAÑOS", precioDeProducto: 10, descripcionDeProducto: "Este es un producto de calidad."},
-    {id: 2, nombreDeProducto: "ILUMINACION", precioDeProducto: 20, descripcionDeProducto: "Este es un producto de calidad."},
-    {id: 3, nombreDeProducto: "PISOS", precioDeProducto: 30, descripcionDeProducto: "Este es un producto de calidad."},
-    {id: 4, nombreDeProducto: "COCINAS", precioDeProducto: 40, descripcionDeProducto: "Este es un producto de calidad."},
-    {id: 5, nombreDeProducto: "OFICINAS", precioDeProducto: 50, descripcionDeProducto: "Este es un producto de calidad."},
-    {id: 6, nombreDeProducto: "FERRETERIA", precioDeProducto: 60, descripcionDeProducto: "Este es un producto de calidad."},
-    {id: 7, nombreDeProducto: "CONSTRUCCION", precioDeProducto: 70, descripcionDeProducto: "Este es un producto de calidad."},
-    {id: 8, nombreDeProducto: "EQUIPOS", precioDeProducto: 80, descripcionDeProducto: "Este es un producto de calidad."}
-    ];
-*/
-
 const lista = document.querySelector('#listado')
 
 fetch('../js/datos.json')
