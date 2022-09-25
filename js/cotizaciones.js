@@ -36,7 +36,7 @@ function crearVariablesDeArticulos(){
 */
 
 let botonRegistro;
-    botonRegistro=document.getElementById("botonCoticacionesArticulos");
+    botonRegistro=document.getElementById("botonCotizacionesArticulos");
     botonRegistro.onclick = () =>{
     obtenerNumero();
     };
