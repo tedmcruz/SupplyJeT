@@ -48,3 +48,4 @@ To allow fetch() to work on javescript with local files, you have to run : "npm 
         or
 
         http-server "d:\my_project"
+        http-server "C:\Users\Ted Cruz\Desktop\SupplyJeT"
