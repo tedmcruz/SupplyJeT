@@ -22,7 +22,7 @@ await fetch('../js/datos.json')
             lista.append(li);
         })
     })
-};
+}
 
 // function crearVariablesDeArticulos(){
 //     var numeroDeArticulo = [];
