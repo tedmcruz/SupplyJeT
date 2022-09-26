@@ -36,15 +36,15 @@ await fetch('../js/datos.json')
 //     }
 
 function createVariables(){
-    var numeroDeArticulo=[];
+    var nombreVariable = 'numerDeArticulo';
+    var i = 0;
+    var numeroDeArticulo;
     var cantidadTotalDeArticulos=10;
   
     for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
-        numeroDeArticulo[i] = i;
+        eval('var '+nombreVariable+i+'= '+i+';');
+        console.log(eval('var '+nombreVariable+i+'= '+i+';'));
     }
-  
-    console.log(numeroDeArticulo[i]=i);
-    return numeroDeArticulo[i];
   };
 
   createVariables();
