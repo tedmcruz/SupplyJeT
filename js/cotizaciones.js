@@ -22,7 +22,7 @@ await fetch('../js/datos.json')
             lista.append(li);
         })
     })
-}
+};
 
 // function crearVariablesDeArticulos(){
 //     var numeroDeArticulo = [];
@@ -75,7 +75,6 @@ function eliminarComillas(palabraConComillas) {
 
 async function obtenerNumero() {
 
-    await crearVariables();
     let precioTotalTodosLosArticulos;
 
         numeroArticuloCotizacion = document.getElementById("numeroArticulo1").value;
