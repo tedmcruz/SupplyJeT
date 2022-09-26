@@ -1,5 +1,12 @@
 const lista = document.querySelector('#listado')
 
+crearLista('../js/datos.json');
+
+async function crearLista(file) {
+    let x = await fetch(file);
+    document.getElementById("prueba").innerHTML = x;
+  }
+
 async function recopilarDatos(){
 await fetch('../js/datos.json')
     .then( (res) => res.json())
@@ -73,7 +80,8 @@ async function obtenerNumero() {
 
     let precioTotalTodosLosArticulos;
 
-        numeroArticuloCotizacion = document.getElementById("numeroArticulo1").value;
+        for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++){
+        numeroArticuloCotizacion = document.getElementById("numeroArticulo"+i).value;
         numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
         let texto;
         let articulo;
@@ -82,7 +90,7 @@ async function obtenerNumero() {
         precioTotalArticulo1=0;
         } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
         texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*10+" pesos.";
-        precioTotalArticulo1=numeroArticuloCotizacion*10;
+        window["precioTotalArticulo"]=numeroArticuloCotizacion*10;
         } else  {
             texto = "El numero tiene que ser positivo y entero.";
         }
@@ -92,6 +100,7 @@ async function obtenerNumero() {
         document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
         localStorage.setItem("numeroGuardado1",JSON.stringify(numeroArticuloCotizacion));
         localStorage.setItem("textoArticulo1",JSON.stringify(texto));
+    };
 
 
         numeroArticuloCotizacion = document.getElementById("numeroArticulo2").value;
