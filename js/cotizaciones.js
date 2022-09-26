@@ -42,7 +42,7 @@ function crearVariables(){
   
     for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
         eval('var '+nombreVariable+i+'= '+i+';');
-        console.log(eval('var '+nombreVariable+i+'= '+i+';'));
+        console.log(eval('var '+nombreVariable+i+';'));
     }
   };
 
