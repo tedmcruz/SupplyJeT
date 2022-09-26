@@ -4,7 +4,7 @@
 
 async function presionarTeclaEnter() {
     let teclaEnter;
-    await recopilarDatos();
+    // await recopilarDatos();
     teclaEnter = document.getElementById("numeroArticulo1");
     teclaEnter.addEventListener("keypress", function(eventoEnter) {
         if (eventoEnter.key === "Enter") {
