@@ -35,7 +35,7 @@ await fetch('../js/datos.json')
 //     return numeroDeArticulo;
 //     }
 
-function crearVariables(){
+async function crearVariables(){
     var nombreVariable = 'precioTotalArticulo';
     var i = 0;
     var j = 0;
@@ -75,9 +75,9 @@ function eliminarComillas(palabraConComillas) {
     return palabraSinComillas;
 };
 
-function obtenerNumero() {
+async function obtenerNumero() {
 
-    crearVariables();
+    await crearVariables();
     let precioTotalTodosLosArticulos;
 
         numeroArticuloCotizacion = document.getElementById("numeroArticulo1").value;

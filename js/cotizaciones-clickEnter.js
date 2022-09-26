@@ -16,6 +16,7 @@ async function presionarTeclaEnter() {
 
 async function ejecutarCotizaciones() {
     await recopilarDatos();
+    await crearVariables();
     await presionarTeclaEnter();
 };
 
