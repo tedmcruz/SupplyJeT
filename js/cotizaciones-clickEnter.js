@@ -18,6 +18,7 @@ async function ejecutarCotizaciones() {
     await recopilarDatos();
     await crearVariables();
     await presionarTeclaEnter();
+    await obtenerNumero();
 };
 
 ejecutarCotizaciones();
