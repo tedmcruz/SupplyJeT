@@ -3,14 +3,15 @@
 //     presionarTeclaEnter.addEventListener("keypress", eventoEnter);
 
 async function presionarTeclaEnter() {
-    document.getElementById("numeroArticulo1").addEventListener("keypress", eventoEnter);
-    function eventoEnter() {
+    await teclaEnter; 
+    teclaEnter = document.getElementById("numeroArticulo1");
+    teclaEnter.addEventListener("keypress", function(eventoEnter) {
         if (eventoEnter.key === "Enter") {
             eventoEnter.preventDefault();
             document.getElementById("botonCotizacionesArticulos").onclick();
         }
-    };
-}
+    });
+};
 
 async function ejecutarCotizaciones() {
     await recopilarDatos();

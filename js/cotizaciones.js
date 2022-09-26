@@ -1,7 +1,7 @@
 const lista = document.querySelector('#listado')
 
 async function recopilarDatos(){
-fetch('../js/datos.json')
+await fetch('../js/datos.json')
     .then( (res) => res.json())
     .then ( (datos) => {
 
