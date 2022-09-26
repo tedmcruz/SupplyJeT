@@ -24,16 +24,27 @@ await fetch('../js/datos.json')
     })
 }
 
-function crearVariablesDeArticulos(){
-    var numeroDeArticulo = [];
-    var cantidadTotalDeArticulos=10;
-    for (var idDeArticulo = 1; idDeArticulo <= cantidadTotalDeArticulos; ++idDeArticulo) {
-        numeroDeArticulo[idDeArticulo] = idDeArticulo;
-    }
+// function crearVariablesDeArticulos(){
+//     var numeroDeArticulo = [];
+//     var cantidadTotalDeArticulos=10;
+//     for (var idDeArticulo = 1; idDeArticulo <= cantidadTotalDeArticulos; ++idDeArticulo) {
+//         numeroDeArticulo[idDeArticulo] = idDeArticulo;
+//     }
     
-    console.log(numeroDeArticulo);
-    return numeroDeArticulo;
+//     console.log(numeroDeArticulo);
+//     return numeroDeArticulo;
+//     }
+
+function createVariables(){
+    var accounts = [];
+  
+    for (var i = 0; i <= 20; ++i) {
+        accounts[i] = "whatever";
     }
+  
+    console.log(accounts);
+    return accounts;
+  };
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCotizacionesArticulos");
