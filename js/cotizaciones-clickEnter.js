@@ -1,11 +1,15 @@
-var presionarTeclaEnter; 
-    presionarTeclaEnter= document.getElementById("numeroArticulo1");
-    presionarTeclaEnter.addEventListener("keypress", function(eventoEnter) {
+// var presionarTeclaEnter; 
+//     presionarTeclaEnter= document.getElementById("numeroArticulo1");
+//     presionarTeclaEnter.addEventListener("keypress", eventoEnter);
+
+    document.getElementById("numeroArticulo1").addEventListener("keypress", eventoEnter);
+
+    function eventoEnter() {
         if (eventoEnter.key === "Enter") {
             eventoEnter.preventDefault();
             document.getElementById("botonCotizacionesArticulos").onclick();
         }
-    });
+    };
     
     presionarTeclaEnter = document.getElementById("numeroArticulo2");
     presionarTeclaEnter.addEventListener("keypress", function(eventoEnter) {
