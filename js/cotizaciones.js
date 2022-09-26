@@ -179,4 +179,5 @@ function obtenerNumero() {
             event.preventDefault();
             document.getElementById("botonCoticacionesArticulos").onclick();
         }
+    console.log(datos.length);
 });
