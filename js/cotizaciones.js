@@ -3,9 +3,9 @@ const lista = document.querySelector('#listado')
 crearLista('../js/datos.json');
 
 async function crearLista(file) {
-    let x = await fetch(file);
-    let y = await x.text();
-    document.getElementById("prueba").innerHTML = y;
+    let jsonDatos = await fetch(file);
+    let listaDatos = await jsonDatos.text();
+    document.getElementById("prueba").innerHTML = listaDatos;
   }
 
 async function recopilarDatos(){
