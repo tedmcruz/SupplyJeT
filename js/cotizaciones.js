@@ -41,7 +41,7 @@ function crearVariables(){
     var cantidadTotalDeArticulos=10;
   
     for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
-        console.log(eval('var '+nombreVariable+i+';'));
+        console.log(eval('var '+nombreVariable+i+'= '+i+'= '+0+';'));
         eval('var '+nombreVariable+i+'= '+i+'= '+0+';');
     }
   };
