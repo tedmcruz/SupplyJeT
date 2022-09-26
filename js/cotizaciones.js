@@ -36,14 +36,15 @@ await fetch('../js/datos.json')
 //     }
 
 function createVariables(){
-    var accounts = [];
+    var numeroDeArticulo;
+    var cantidadTotalDeArticulos=10;
   
-    for (var i = 0; i <= 20; ++i) {
-        accounts[i] = "whatever";
+    for (var i = 0; i <= cantidadTotalDeArticulos; ++i) {
+        numeroDeArticulo[i] = i;
     }
   
-    console.log(accounts);
-    return accounts;
+    console.log(numeroDeArticulo[i]=i);
+    return numeroDeArticulo[i];
   };
 
   createVariables();
