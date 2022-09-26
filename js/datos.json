@@ -1,4 +1,5 @@
-[
+{
+    "producto":[
     {"idDeProducto":1, "nombreDeProducto": "BAÑOS", "precioDeProducto": 10, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"src=..\\images\\bathrooms.jpg"},
     {"idDeProducto":2, "nombreDeProducto": "ILUMINACION", "precioDeProducto": 20, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"src=..\\images\\lighting.jpg"},
     {"idDeProducto":3, "nombreDeProducto": "PISOS", "precioDeProducto": 30, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"src=..\\images\\floor-tiles.jpg"},
@@ -8,3 +9,4 @@
     {"idDeProducto":7, "nombreDeProducto": "CONSTRUCCION", "precioDeProducto": 70, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"src=..\\images\\construction.jpg"},
     {"idDeProducto":8, "nombreDeProducto": "EQUIPOS", "precioDeProducto": 80, "descripcionDeProducto": "Este es un producto de calidad.", "imagenDeProducto":"src=..\\images\\heavy-machinery.jpg"}
 ]
+}
