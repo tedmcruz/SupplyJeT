@@ -34,17 +34,16 @@ await fetch('../js/datos.json')
 //     console.log(numeroDeArticulo);
 //     return numeroDeArticulo;
 //     }
-
-async function crearVariables(){
     var nombreVariable = 'precioTotalArticulo';
     var i = 0;
     var j = 0;
     var cantidadTotalDeArticulos=10;
   
     for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
+        console.log(eval('var '+nombreVariable+i+'= '+j+';'));
+        eval('var '+nombreVariable+i+'= '+j+';');
         return eval('var '+nombreVariable+i+'= '+j+';');
-    }
-  };
+    };
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCotizacionesArticulos");
