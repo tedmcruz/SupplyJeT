@@ -39,7 +39,7 @@ function createVariables(){
     var numeroDeArticulo;
     var cantidadTotalDeArticulos=10;
   
-    for (var i = 0; i <= cantidadTotalDeArticulos; ++i) {
+    for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
         numeroDeArticulo[i] = i;
     }
   
