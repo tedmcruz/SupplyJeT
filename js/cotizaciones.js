@@ -1,5 +1,6 @@
 const lista = document.querySelector('#listado')
 
+async function recopilarDatos(){
 fetch('../js/datos.json')
     .then( (res) => res.json())
     .then ( (datos) => {
@@ -21,6 +22,7 @@ fetch('../js/datos.json')
             lista.append(li);
         })
     })
+}
 
 function crearVariablesDeArticulos(){
     var numeroDeArticulo = [];
