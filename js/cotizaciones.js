@@ -42,8 +42,7 @@ async function crearVariables(){
     var cantidadTotalDeArticulos=10;
   
     for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
-        console.log(eval('var '+nombreVariable+i+'= '+j+';'));
-        eval('var '+nombreVariable+i+'= '+j+';');
+        return eval('var '+nombreVariable+i+'= '+j+';');
     }
   };
 
