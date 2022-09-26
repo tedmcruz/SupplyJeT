@@ -1,4 +1,5 @@
-var presionarTeclaEnter = document.getElementById("numeroArticulo1");
+var presionarTeclaEnter; 
+    presionarTeclaEnter= document.getElementById("numeroArticulo1");
     presionarTeclaEnter.addEventListener("keypress", function(eventoEnter) {
         if (eventoEnter.key === "Enter") {
             eventoEnter.preventDefault();
