@@ -75,10 +75,9 @@ function eliminarComillas(palabraConComillas) {
     return palabraSinComillas;
 };
 
-crearVariables();
-
 function obtenerNumero() {
 
+    crearVariables();
     let precioTotalTodosLosArticulos;
 
         numeroArticuloCotizacion = document.getElementById("numeroArticulo1").value;
