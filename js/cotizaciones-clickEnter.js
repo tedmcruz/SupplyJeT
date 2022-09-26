@@ -1,12 +1,11 @@
 var input = document.getElementById("numeroArticulo1");
     input.addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
+        if (event.key === 'Enter') {
             event.preventDefault();
             document.getElementById("botonCotizacionesArticulos").onclick();
         }
     });
     
-/*
     input = document.getElementById("numeroArticulo2");
     input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
@@ -30,4 +29,3 @@ var input = document.getElementById("numeroArticulo1");
             document.getElementById("botonCotizacionesArticulos").onclick();
         };
     });
-*/
