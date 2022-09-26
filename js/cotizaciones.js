@@ -35,11 +35,11 @@ await fetch('../js/datos.json')
 //     return numeroDeArticulo;
 //     }
 var nombreVariable = 'precioTotalArticulo';
-    var inicio = 0;
+    var inicioSequencia = 0;
     var j = 0;
     var cantidadTotalDeArticulos=10;
 
-    for (var inicioSequencia = 1; inicioSequencia <= cantidadTotalDeArticulos; ++inicioSequencia) {
+    for (inicioSequencia = 1; inicioSequencia <= cantidadTotalDeArticulos; ++inicioSequencia) {
         console.log(eval('var '+nombreVariable+inicioSequencia+'= '+j+';'));
         eval('var '+nombreVariable+inicioSequencia+'= '+j+';');
         return eval('var '+nombreVariable+inicioSequencia+'= '+j+';');
