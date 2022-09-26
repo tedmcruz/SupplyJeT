@@ -2,8 +2,9 @@
 //     presionarTeclaEnter= document.getElementById("numeroArticulo1");
 //     presionarTeclaEnter.addEventListener("keypress", eventoEnter);
 
+window.addEventListener('load', function() {
     document.getElementById("numeroArticulo1").addEventListener("keypress", eventoEnter);
-
+})
     function eventoEnter() {
         if (eventoEnter.key === "Enter") {
             eventoEnter.preventDefault();
