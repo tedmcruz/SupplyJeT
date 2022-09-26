@@ -20,9 +20,9 @@ await fetch('../js/datos.json')
                 `
             li.classList.add('cotizaciones__item');
             lista.append(li);
-        })
-    })
-}
+        });
+    });
+};
 
 // function crearVariablesDeArticulos(){
 //     var numeroDeArticulo = [];
@@ -34,16 +34,16 @@ await fetch('../js/datos.json')
 //     console.log(numeroDeArticulo);
 //     return numeroDeArticulo;
 //     }
-    var nombreVariable = 'precioTotalArticulo';
-    var i = 0;
-    var j = 0;
-    var cantidadTotalDeArticulos=10;
+    // var nombreVariable = 'precioTotalArticulo';
+    // var i = 0;
+    // var j = 0;
+    // var cantidadTotalDeArticulos=10;
   
-    for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
-        console.log(eval('var '+nombreVariable+i+'= '+j+';'));
-        eval('var '+nombreVariable+i+'= '+j+';');
-        return eval('var '+nombreVariable+i+'= '+j+';');
-    };
+    // for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
+    //     console.log(eval('var '+nombreVariable+i+'= '+j+';'));
+    //     eval('var '+nombreVariable+i+'= '+j+';');
+    //     return eval('var '+nombreVariable+i+'= '+j+';');
+    // };
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCotizacionesArticulos");
