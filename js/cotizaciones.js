@@ -4,7 +4,8 @@ crearLista('../js/datos.json');
 
 async function crearLista(file) {
     let x = await fetch(file);
-    document.getElementById("prueba").innerHTML = x;
+    let y = await x.text();
+    document.getElementById("prueba").innerHTML = y;
   }
 
 async function recopilarDatos(){
