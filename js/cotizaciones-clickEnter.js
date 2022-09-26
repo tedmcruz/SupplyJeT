@@ -1,6 +1,6 @@
 var input = document.getElementById("numeroArticulo1");
     input.addEventListener("keypress", function(event) {
-        if (event.keyCode === 13) {
+        if (event.key === "Enter") {
             event.preventDefault();
             document.getElementById("botonCotizacionesArticulos").onclick();
         }
