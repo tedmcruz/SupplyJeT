@@ -46,6 +46,8 @@ function createVariables(){
     return accounts;
   };
 
+  createVariables();
+
 let botonRegistro;
     botonRegistro=document.getElementById("botonCotizacionesArticulos");
     botonRegistro.onclick = function () {
