@@ -36,7 +36,7 @@ await fetch('../js/datos.json')
 //     }
 
 function createVariables(){
-    var numeroDeArticulo=0;
+    var numeroDeArticulo=[];
     var cantidadTotalDeArticulos=10;
   
     for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
