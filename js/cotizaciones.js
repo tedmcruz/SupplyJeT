@@ -35,10 +35,9 @@ await fetch('../js/datos.json')
 //     return numeroDeArticulo;
 //     }
 
-function createVariables(){
-    var nombreVariable = 'numerDeArticulo';
+function crearVariables(){
+    var nombreVariable = 'precioTotalArticulo';
     var i = 0;
-    var numeroDeArticulo;
     var cantidadTotalDeArticulos=10;
   
     for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
@@ -46,8 +45,6 @@ function createVariables(){
         console.log(eval('var '+nombreVariable+i+'= '+i+';'));
     }
   };
-
-  createVariables();
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCotizacionesArticulos");
