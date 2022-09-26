@@ -153,7 +153,7 @@ function obtenerNumero() {
     input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            document.getElementById("botonCoticacionesArticulos").onclick();
+            document.getElementById("botonCotizacionesArticulos").onclick();
         }
     });
     
@@ -161,7 +161,7 @@ function obtenerNumero() {
     input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            document.getElementById("botonCoticacionesArticulos").onclick();
+            document.getElementById("botonCotizacionesArticulos").onclick();
         }
     });
 
@@ -169,7 +169,7 @@ function obtenerNumero() {
     input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            document.getElementById("botonCoticacionesArticulos").onclick();
+            document.getElementById("botonCotizacionesArticulos").onclick();
         }
     });
 
@@ -177,7 +177,7 @@ function obtenerNumero() {
     input.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            document.getElementById("botonCoticacionesArticulos").onclick();
+            document.getElementById("botonCotizacionesArticulos").onclick();
         }
     console.log(datos.length);
 });
