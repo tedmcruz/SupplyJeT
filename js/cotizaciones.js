@@ -5,7 +5,7 @@ crearLista('../js/datos.json');
 async function crearLista(file) {
     let jsonDatos = await fetch(file);
     let listaDatos = await jsonDatos.text();
-    document.getElementById("prueba").innerHTML = listaDatos;
+    document.getElementById("prueba").innerHTML = listaDatos.length;
   }
 
 async function recopilarDatos(){
@@ -44,6 +44,7 @@ await fetch('../js/datos.json')
 //     }
 
 var cantidadTotalDeArticulos=10;
+alert (cantidadTotalDeArticulos);
 for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++) { 
     window["precioTotalArticulo"+numeroSequencia] = new Object();
 }
