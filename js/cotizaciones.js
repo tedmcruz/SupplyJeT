@@ -162,4 +162,4 @@ async function obtenerNumero() {
     //     localStorage.setItem("numeroGuardado4",JSON.stringify(numeroArticuloCotizacion));
     //     localStorage.setItem("textoArticulo4",JSON.stringify(texto));
 
-    // };
+};
