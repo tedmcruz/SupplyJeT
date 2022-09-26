@@ -19,8 +19,8 @@ fetch('../js/datos.json')
                 `
             li.classList.add('cotizaciones__item');
             lista.append(li);
-            obtenerNumero();
         })
+        obtenerNumero();
     })
 
 /*
