@@ -80,9 +80,11 @@ function eliminarComillas(palabraConComillas) {
 async function obtenerNumero() {
 
     let precioTotalTodosLosArticulos;
+    let numeroArticuloParaFormula;
 
         for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++){
-        numeroArticuloCotizacion = document.getElementById("numeroArticulo"+i).value;
+        numeroArticuloParaFormula = "numeroArticulo"+numeroSequencia;
+        numeroArticuloCotizacion = document.getElementById(numeroArticuloParaFormula).value;
         numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
         let texto;
         let articulo;
@@ -103,61 +105,61 @@ async function obtenerNumero() {
         localStorage.setItem("textoArticulo1",JSON.stringify(texto));
     };
 
-
-        numeroArticuloCotizacion = document.getElementById("numeroArticulo2").value;
-        numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
-        if (isNaN(numeroArticuloCotizacion)) {
-        texto = "No Valido";
-        precioTotalArticulo2=0;
-        } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
-        texto = "El costo de "+numeroArticuloCotizacion+" iluminacion es de "+numeroArticuloCotizacion*20+" pesos.";
-        precioTotalArticulo2=numeroArticuloCotizacion*20;
-        } else  {
-            texto = "El numero tiene que ser positivo y entero.";
-        }
-        document.getElementById("textoArticulo2").innerHTML = texto;
-        precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
-        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
-        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-        localStorage.setItem("numeroGuardado2",JSON.stringify(numeroArticuloCotizacion));
-        localStorage.setItem("textoArticulo2",JSON.stringify(texto));
-
-
-        numeroArticuloCotizacion = document.getElementById("numeroArticulo3").value;
-        numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
-        if (isNaN(numeroArticuloCotizacion)) {
-        texto = "No Valido";
-        precioTotalArticulo3=0;
-        } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
-        texto = "El costo de "+numeroArticuloCotizacion+" pisos es de "+numeroArticuloCotizacion*30+" pesos.";
-        precioTotalArticulo3=numeroArticuloCotizacion*30;
-        } else  {
-            texto = "El numero tiene que ser positivo y entero.";
-        }
-        document.getElementById("textoArticulo3").innerHTML = texto;
-        precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
-        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
-        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-        localStorage.setItem("numeroGuardado3",JSON.stringify(numeroArticuloCotizacion));
-        localStorage.setItem("textoArticulo3",JSON.stringify(texto));
+    
+    //     numeroArticuloCotizacion = document.getElementById("numeroArticulo2").value;
+    //     numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
+    //     if (isNaN(numeroArticuloCotizacion)) {
+    //     texto = "No Valido";
+    //     precioTotalArticulo2=0;
+    //     } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
+    //     texto = "El costo de "+numeroArticuloCotizacion+" iluminacion es de "+numeroArticuloCotizacion*20+" pesos.";
+    //     precioTotalArticulo2=numeroArticuloCotizacion*20;
+    //     } else  {
+    //         texto = "El numero tiene que ser positivo y entero.";
+    //     }
+    //     document.getElementById("textoArticulo2").innerHTML = texto;
+    //     precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+    //     textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+    //     document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
+    //     localStorage.setItem("numeroGuardado2",JSON.stringify(numeroArticuloCotizacion));
+    //     localStorage.setItem("textoArticulo2",JSON.stringify(texto));
 
 
-        numeroArticuloCotizacion = document.getElementById("numeroArticulo4").value;
-        numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
-        if (isNaN(numeroArticuloCotizacion)) {
-        texto = "No Valido";
-        precioTotalArticulo4=0;
-        } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
-        texto = "El costo de "+numeroArticuloCotizacion+" cocinas es de "+numeroArticuloCotizacion*40+" pesos.";
-        precioTotalArticulo4=numeroArticuloCotizacion*40;
-        } else  {
-            texto = "El numero tiene que ser positivo y entero.";
-        }
-        document.getElementById("textoArticulo4").innerHTML = texto;
-        precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
-        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
-        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-        localStorage.setItem("numeroGuardado4",JSON.stringify(numeroArticuloCotizacion));
-        localStorage.setItem("textoArticulo4",JSON.stringify(texto));
+    //     numeroArticuloCotizacion = document.getElementById("numeroArticulo3").value;
+    //     numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
+    //     if (isNaN(numeroArticuloCotizacion)) {
+    //     texto = "No Valido";
+    //     precioTotalArticulo3=0;
+    //     } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
+    //     texto = "El costo de "+numeroArticuloCotizacion+" pisos es de "+numeroArticuloCotizacion*30+" pesos.";
+    //     precioTotalArticulo3=numeroArticuloCotizacion*30;
+    //     } else  {
+    //         texto = "El numero tiene que ser positivo y entero.";
+    //     }
+    //     document.getElementById("textoArticulo3").innerHTML = texto;
+    //     precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+    //     textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+    //     document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
+    //     localStorage.setItem("numeroGuardado3",JSON.stringify(numeroArticuloCotizacion));
+    //     localStorage.setItem("textoArticulo3",JSON.stringify(texto));
 
-    };
+
+    //     numeroArticuloCotizacion = document.getElementById("numeroArticulo4").value;
+    //     numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
+    //     if (isNaN(numeroArticuloCotizacion)) {
+    //     texto = "No Valido";
+    //     precioTotalArticulo4=0;
+    //     } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
+    //     texto = "El costo de "+numeroArticuloCotizacion+" cocinas es de "+numeroArticuloCotizacion*40+" pesos.";
+    //     precioTotalArticulo4=numeroArticuloCotizacion*40;
+    //     } else  {
+    //         texto = "El numero tiene que ser positivo y entero.";
+    //     }
+    //     document.getElementById("textoArticulo4").innerHTML = texto;
+    //     precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+    //     textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+    //     document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
+    //     localStorage.setItem("numeroGuardado4",JSON.stringify(numeroArticuloCotizacion));
+    //     localStorage.setItem("textoArticulo4",JSON.stringify(texto));
+
+    // };
