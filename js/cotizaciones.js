@@ -38,11 +38,12 @@ await fetch('../js/datos.json')
 function crearVariables(){
     var nombreVariable = 'precioTotalArticulo';
     var i = 0;
+    var j = 0;
     var cantidadTotalDeArticulos=10;
   
     for (var i = 1; i <= cantidadTotalDeArticulos; ++i) {
-        console.log(eval('var '+nombreVariable+i+'= '+i+'= '+0+';'));
-        eval('var '+nombreVariable+i+'= '+i+'= '+0+';');
+        console.log(eval('var '+nombreVariable+i+'= '+i+'= '+j+';'));
+        eval('var '+nombreVariable+i+'= '+i+'= '+j+';');
     }
   };
 
