@@ -87,6 +87,9 @@ async function obtenerNumero() {
     }
 
     let precioTotalTodosLosArticulos;
+    let textoArticulo;
+    let numeroGuardado;
+    let identificadorDeNumeroGuardado;
     await fetch('../js/datos.json')
     .then( (res) => res.json())
     .then ( (datos) => {
@@ -107,12 +110,14 @@ async function obtenerNumero() {
             } else  {
                 texto = "El numero tiene que ser positivo y entero.";
             }
-            document.getElementById("textoArticulo1").innerHTML = texto;
-            precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+            textoArticulo="textoArticulo"+producto.idDeProducto;
+            document.getElementById(textoArticulo).innerHTML = texto;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-            localStorage.setItem("numeroGuardado1",JSON.stringify(numeroArticuloCotizacion));
-            localStorage.setItem("textoArticulo1",JSON.stringify(texto));
+            numeroGuardado="numeroGuardado"+producto.idDeProducto;
+            localStorage.setItem(numeroGuardado,JSON.stringify(numeroArticuloCotizacion));
+            identificadorDeNumeroGuardado="identificadorDeNumeroGuardado"+producto.idDeProducto;
+            localStorage.setItem(identificadorDeNumeroGuardado,JSON.stringify(texto));
         });
     });
     
