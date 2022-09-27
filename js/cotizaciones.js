@@ -28,8 +28,8 @@ await fetch('../js/datos.json')
                 `
             li.classList.add('cotizaciones__item');
             lista.append(li);
-            let producto = producto.idDeProducto
-            console.log(producto)
+            let producto1 = producto.idDeProducto
+            console.log(producto1)
         });
     });
 };
