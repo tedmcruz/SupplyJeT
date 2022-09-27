@@ -5,7 +5,7 @@ crearLista('../js/datos.json');
 async function crearLista(file) {
     let jsonDatos = await fetch(file);
     let listaDatos = await jsonDatos.text();
-    document.getElementById("prueba").innerHTML = JSON.parse(listaDatos);
+    document.getElementById("prueba").innerHTML = Array.from(listaDatos);
   }
 
 async function recopilarDatos(){
@@ -84,7 +84,7 @@ async function obtenerNumero() {
     let numeroArticuloParaFormula;
 
         for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++){
-        numeroArticuloParaFormula = "numeroArticulo"+numeroSequencia;
+        window["numeroArticulo"+numeroSequencia] = new Object();
         numeroArticuloCotizacion = document.getElementById(numeroArticuloParaFormula).value;
         numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
         let texto;
