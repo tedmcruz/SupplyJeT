@@ -5,7 +5,6 @@ crearLista('../js/datos.json');
 async function crearLista(file) {
     let jsonDatos = await fetch(file);
     let listaDatos = await jsonDatos.text();
-    document.getElementById("prueba").innerHTML = JSON.parse(listaDatos);
   }
 
 async function recopilarDatos(){
