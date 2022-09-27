@@ -28,8 +28,6 @@ await fetch('../js/datos.json')
                 `
             li.classList.add('cotizaciones__item');
             lista.append(li);
-            let producto1 = producto.idDeProducto + "prueba";
-            console.log(producto1)
         });
     });
 };
@@ -46,9 +44,11 @@ await fetch('../js/datos.json')
 //     }
 
 var cantidadTotalDeArticulos=10;
-alert (cantidadTotalDeArticulos);
+// alert (cantidadTotalDeArticulos);
 for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++) { 
-    window["precioTotalArticulo"+numeroSequencia] = new Object();
+    window["precioTotalArticulo"+numeroSequencia] = new Object(numeroSequencia);
+    window["numeroArticulo"+numeroSequencia] = new Object(numeroSequencia);
+    console.log(window["precioTotalArticulo"+numeroSequencia] = new Object(numeroSequencia))
 }
 console.log(precioTotalArticulo1);
 
@@ -83,31 +83,35 @@ function eliminarComillas(palabraConComillas) {
 async function obtenerNumero() {
 
     let precioTotalTodosLosArticulos;
-    let numeroArticuloParaFormula;
+    await fetch('../js/datos.json')
+    .then( (res) => res.json())
+    .then ( (datos) => {
+
+        datos.forEach((producto) => {
+
 
         for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++){
-        window["numeroArticulo"+numeroSequencia] = new Object();
-        numeroArticuloCotizacion = document.getElementById(numeroArticuloParaFormula).value;
-        numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
-        let texto;
-        let articulo;
-        if (isNaN(numeroArticuloCotizacion)) {
-        texto = "No Valido";
-        precioTotalArticulo1=0;
-        } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
-        texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*10+" pesos.";
-        window["precioTotalArticulo"]=numeroArticuloCotizacion*10;
-        } else  {
-            texto = "El numero tiene que ser positivo y entero.";
-        }
-        document.getElementById("textoArticulo1").innerHTML = texto;
-        precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
-        textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
-        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
-        localStorage.setItem("numeroGuardado1",JSON.stringify(numeroArticuloCotizacion));
-        localStorage.setItem("textoArticulo1",JSON.stringify(texto));
-    };
-
+            numeroArticuloCotizacion = document.getElementById(numeroArticuloParaFormula).value;
+            numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
+            let texto;
+            if (isNaN(numeroArticuloCotizacion)) {
+            texto = "No Valido";
+            precioTotalArticulo1=0;
+            } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
+            texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*10+" pesos.";
+            window["precioTotalArticulo"]=numeroArticuloCotizacion*10;
+            } else  {
+                texto = "El numero tiene que ser positivo y entero.";
+            }
+            document.getElementById("textoArticulo1").innerHTML = texto;
+            precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+            textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+            document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
+            localStorage.setItem("numeroGuardado1",JSON.stringify(numeroArticuloCotizacion));
+            localStorage.setItem("textoArticulo1",JSON.stringify(texto));
+        };
+        });
+    });
     
     //     numeroArticuloCotizacion = document.getElementById("numeroArticulo2").value;
     //     numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
