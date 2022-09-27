@@ -235,11 +235,14 @@ footer {
   padding: 0; }
 
 .cotizaciones__item {
-  display: flex; }
+  display: grid;
+  grid-template-columns: 20rem 1fr 0.25fr 1fr; }
 
 .cotizaciones__imagenes {
   display: flex;
   justify-content: center;
+  justify-self: center;
+  align-content: center;
   list-style-type: none;
   height: 18rem;
   width: 18rem;
@@ -291,14 +294,18 @@ footer {
   flex-direction: column;
   font-size: 1.5rem;
   font-weight: bolder;
-  justify-content: center; }
+  justify-content: center;
+  max-width: 5rem;
+  justify-self: center; }
 
 .precioArticulo {
   display: flex;
   font-size: 1.5rem;
   font-weight: bolder;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  justify-self: center;
+  margin: 0 0 0 0; }
 
 #cotizaciones_precio_total {
   display: flex;
@@ -406,6 +413,11 @@ footer {
   align-self: center; }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+  .cotizaciones__item {
+    grid-template-columns: 20rem 1fr;
+    grid-template-rows: 3fr 1fr; } }
+
 @media screen and (max-width: 768px) {
   .menu__item {
     font-size: 1.2rem; }
@@ -424,6 +436,11 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem; } }
 
+@media screen and (max-width: 600px) {
+  .cotizaciones__item {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; } }
+
 @media screen and (max-width: 560px) {
   .menu {
     flex-direction: column; }
@@ -432,12 +449,6 @@ footer {
   .departamentos__lista {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr); }
-  .cotizaciones__imagenes {
-    display: flex;
-    margin: auto;
-    justify-content: center; }
-  .cotizaciones__item {
-    flex-direction: column; }
   .carrito__imagenes {
     display: flex;
     margin: auto;
