@@ -48,10 +48,9 @@ var cantidadTotalDeArticulos=10;
 for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++) { 
     window["precioTotalArticulo"+numeroSequencia] = new Object(numeroSequencia);
     window["numeroArticulo"+numeroSequencia] = new Object(numeroSequencia);
-    console.log(precioTotalArticulo1)
-    console.log(precioTotalArticulo2)
 }
 console.log(precioTotalArticulo1);
+console.log(precioTotalArticulo2);
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCotizacionesArticulos");
