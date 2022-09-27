@@ -4,8 +4,8 @@ async function presionarTeclaEnter() {
     .then( (res) => res.json())
     .then ( (datos) => {
         datos.forEach((producto) => {
-
-            teclaEnter = document.getElementById("numeroArticulo1");
+            numeroArticulo="numeroArticulo"+producto.idDeProducto;
+            teclaEnter = document.getElementById(numeroArticulo);
             teclaEnter.addEventListener("keypress", function(eventoEnter) {
                 if (eventoEnter.key === "Enter") {
                     eventoEnter.preventDefault();
