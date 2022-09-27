@@ -32,3 +32,35 @@ When using "while", the code will restart (rerun) as long as the "while" conditi
 When using "do" "while", there is no need to put a new prompt at the end.
 When using "switch" within "while", the code run will skip until the "case" with the entered value. The "default" will run when the prompt value doesn't match a "case" value.
 */
+
+const arr = [5, 15, 45];
+
+const sum = arr.reduce((accumulator, value) => {
+  return accumulator + value;
+}, 0);
+
+console.log(sum); // 👉️ 65
+
+-----------------------------------------
+
+const arr = [5, 15, 45];
+
+let sum = 0;
+
+for (const value of arr) {
+  sum += value;
+}
+
+console.log(sum); // 👉️ 65
+
+----------------------------------
+
+const arr = [5, 15, 45];
+
+let sum = 0;
+
+for (let index = 0; index < arr.length; index++) {
+  sum += arr[index];
+}
+
+console.log(sum); // 👉️ 65

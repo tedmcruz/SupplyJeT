@@ -43,14 +43,12 @@ await fetch('../js/datos.json')
 //     return numeroDeArticulo;
 //     }
 
-var cantidadTotalDeArticulos=10;
+// var cantidadTotalDeArticulos=10;
 // alert (cantidadTotalDeArticulos);
-for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++) { 
-    window["precioTotalArticulo"+numeroSequencia] = new Object(numeroSequencia);
-    window["numeroArticulo"+numeroSequencia] = new Object(numeroSequencia);
-}
-console.log(precioTotalArticulo1);
-console.log(precioTotalArticulo2);
+// for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++) { 
+//     window["precioTotalArticulo"+numeroSequencia] = new Object(numeroSequencia);
+//     window["numeroArticulo"+numeroSequencia] = new Object(numeroSequencia);
+// }
 
 let botonRegistro;
     botonRegistro=document.getElementById("botonCotizacionesArticulos");
@@ -82,6 +80,12 @@ function eliminarComillas(palabraConComillas) {
 
 async function obtenerNumero() {
 
+    var cantidadTotalDeArticulos=10;
+    // for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++) { 
+    //     window["precioTotalArticulo"+numeroSequencia] = new Object(numeroSequencia);
+    //     window["numeroArticulo"+numeroSequencia] = new Object(numeroSequencia);
+    // }
+
     let precioTotalTodosLosArticulos;
     await fetch('../js/datos.json')
     .then( (res) => res.json())
@@ -89,8 +93,7 @@ async function obtenerNumero() {
 
         datos.forEach((producto) => {
 
-
-        for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++){
+            numeroArticuloParaFormula = "numeroArticulo"+producto.idDeProducto;
             numeroArticuloCotizacion = document.getElementById(numeroArticuloParaFormula).value;
             numeroArticuloCotizacion = parseFloat(numeroArticuloCotizacion);
             let texto;
@@ -98,8 +101,8 @@ async function obtenerNumero() {
             texto = "No Valido";
             precioTotalArticulo1=0;
             } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
-            texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*10+" pesos.";
-            window["precioTotalArticulo"]=numeroArticuloCotizacion*10;
+            texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*producto.precioDeProducto+" pesos.";
+            window["precioTotalArticulo"+producto.idDeProducto]=numeroArticuloCotizacion*producto.precioDeProducto;
             } else  {
                 texto = "El numero tiene que ser positivo y entero.";
             }
@@ -109,7 +112,6 @@ async function obtenerNumero() {
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
             localStorage.setItem("numeroGuardado1",JSON.stringify(numeroArticuloCotizacion));
             localStorage.setItem("textoArticulo1",JSON.stringify(texto));
-        };
         });
     });
     
