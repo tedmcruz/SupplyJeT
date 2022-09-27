@@ -28,7 +28,7 @@ await fetch('../js/datos.json')
                 `
             li.classList.add('cotizaciones__item');
             lista.append(li);
-            let producto1 = producto.idDeProducto
+            let producto1 = producto.idDeProducto + "prueba";
             console.log(producto1)
         });
     });
