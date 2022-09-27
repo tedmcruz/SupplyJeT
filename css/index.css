@@ -448,8 +448,7 @@ footer {
     grid-template-rows: repeat(4, 1fr); }
   .cotizaciones__imagenes {
     display: flex;
-    margin: auto;
-    justify-content: center; }
+    margin: auto; }
   .cotizaciones__item {
     flex-direction: column; }
   .carrito__imagenes {
