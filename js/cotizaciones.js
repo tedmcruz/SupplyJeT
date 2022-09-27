@@ -30,7 +30,7 @@ await fetch('../js/datos.json')
             lista.append(li);
             numeroArticulo="numeroArticulo"+producto.idDeProducto;
             numeroGuardado="numeroGuardado"+producto.idDeProducto;
-            document.getElementById(numeroArticulo).value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado1")));
+            document.getElementById(numeroArticulo).value=parseInt(JSON.parse(localStorage.getItem(numeroGuardado)));
         });
     });
 };
