@@ -22,7 +22,7 @@
 
 .cotizaciones__item{
     display: grid;
-    grid-template-columns: repeat(4, minmax(1fr,1fr));
+    grid-template-columns: 18rem 1fr 1fr 1fr;
 }
 
 .cotizaciones__imagenes{
