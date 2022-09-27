@@ -77,7 +77,7 @@ async function obtenerNumero() {
             texto = "No Valido";
             precioTotalArticulo1=0;
             } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
-            texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*producto.precioDeProducto+" pesos.";
+            texto = "El costo de "+numeroArticuloCotizacion+" "+producto.nombreDeProducto+" es de "+numeroArticuloCotizacion*producto.precioDeProducto+" pesos.";
             window["precioTotalArticulo"+producto.idDeProducto]=numeroArticuloCotizacion*producto.precioDeProducto;
             precioTotalTodosLosArticulos.push(numeroArticuloCotizacion*producto.precioDeProducto);
             } else  {
