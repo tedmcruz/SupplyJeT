@@ -410,7 +410,7 @@ footer {
   align-self: center; }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .cotizaciones__item {
     grid-template-columns: 20rem 1fr;
     grid-template-rows: 3fr 1fr; } }
@@ -432,6 +432,11 @@ footer {
     grid-template-areas: "p h3" ". ."  "h4 p1";
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem; } }
+
+@media screen and (max-width: 600px) {
+  .cotizaciones__item {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; } }
 
 @media screen and (max-width: 560px) {
   .menu {
