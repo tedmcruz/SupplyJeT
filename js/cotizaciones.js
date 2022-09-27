@@ -55,7 +55,7 @@ async function obtenerNumero() {
         window["numeroArticulo"+numeroSequencia] = new Object(numeroSequencia);
     }
 
-    let precioTotalTodosLosArticulos;
+    let precioTotalTodosLosArticulos=[];
     let textoArticulo;
     let numeroGuardado;
     let identificadorDeNumeroGuardado;
@@ -76,6 +76,7 @@ async function obtenerNumero() {
             } else if (Number.isInteger(numeroArticuloCotizacion) && numeroArticuloCotizacion>=parseInt(0)) {
             texto = "El costo de "+numeroArticuloCotizacion+" baños es de "+numeroArticuloCotizacion*producto.precioDeProducto+" pesos.";
             window["precioTotalArticulo"+producto.idDeProducto]=numeroArticuloCotizacion*producto.precioDeProducto;
+            precioTotalTodosLosArticulos.push(numeroArticuloCotizacion*producto.precioDeProducto);
             } else  {
                 texto = "El numero tiene que ser positivo y entero.";
             }
