@@ -47,6 +47,10 @@ function eliminarComillas(palabraConComillas) {
     return palabraSinComillas;
 };
 
+function sumaDeArray(sumatoria){
+return sumatoria;
+}
+
 async function obtenerNumero() {
 
     var cantidadTotalDeArticulos=10;
@@ -82,7 +86,7 @@ async function obtenerNumero() {
             }
             textoArticulo="textoArticulo"+producto.idDeProducto;
             document.getElementById(textoArticulo).innerHTML = texto;
-            textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
+            textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos.reduce(sumaDeArray)+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
             numeroGuardado="numeroGuardado"+producto.idDeProducto;
             localStorage.setItem(numeroGuardado,JSON.stringify(numeroArticuloCotizacion));
