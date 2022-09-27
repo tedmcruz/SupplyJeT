@@ -28,6 +28,8 @@
 .cotizaciones__imagenes{
     display: flex;
     justify-content: center;
+    justify-self: center;
+    align-content: center;
     list-style-type: none;
     @include sizes (18rem,18rem);
     @include minimum-size(18rem,18rem);
