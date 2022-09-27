@@ -86,12 +86,15 @@ async function obtenerNumero() {
             }
             textoArticulo="textoArticulo"+producto.idDeProducto;
             document.getElementById(textoArticulo).innerHTML = texto;
-            textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos.reduce(sumaDeArray)+" pesos.";
-            document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
             numeroGuardado="numeroGuardado"+producto.idDeProducto;
             localStorage.setItem(numeroGuardado,JSON.stringify(numeroArticuloCotizacion));
             identificadorDeNumeroGuardado="identificadorDeNumeroGuardado"+producto.idDeProducto;
             localStorage.setItem(identificadorDeNumeroGuardado,JSON.stringify(texto));
         });
+        let sumatoriaPrecioTotalTodosLosArticulos = precioTotalTodosLosArticulos.reduce((acumuladorPrecioTotal,valorNuevoDePrecioTotal)=>{
+            return acumuladorPrecioTotal + valorNuevoDePrecioTotal;
+        },0);
+        textoPrecioTotal="El costo de todos los articulos es de "+sumatoriaPrecioTotalTodosLosArticulos+" pesos.";
+        document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
     });
 };
