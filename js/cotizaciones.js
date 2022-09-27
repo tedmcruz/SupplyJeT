@@ -35,45 +35,11 @@ await fetch('../js/datos.json')
     });
 };
 
-// function crearVariablesDeArticulos(){
-//     var numeroDeArticulo = [];
-//     var cantidadTotalDeArticulos=10;
-//     for (var idDeArticulo = 1; idDeArticulo <= cantidadTotalDeArticulos; ++idDeArticulo) {
-//         numeroDeArticulo[idDeArticulo] = idDeArticulo;
-//     }
-    
-//     console.log(numeroDeArticulo);
-//     return numeroDeArticulo;
-//     }
-
-// var cantidadTotalDeArticulos=10;
-// alert (cantidadTotalDeArticulos);
-// for (var numeroSequencia = 1; numeroSequencia < cantidadTotalDeArticulos; numeroSequencia++) { 
-//     window["precioTotalArticulo"+numeroSequencia] = new Object(numeroSequencia);
-//     window["numeroArticulo"+numeroSequencia] = new Object(numeroSequencia);
-// }
-
 let botonRegistro;
     botonRegistro=document.getElementById("botonCotizacionesArticulos");
     botonRegistro.onclick = function () {
     obtenerNumero()
 };
-
-/*
-document.getElementById("numeroArticulo1").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado1")));
-document.getElementById("numeroArticulo2").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado2")));
-document.getElementById("numeroArticulo3").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado3")));
-document.getElementById("numeroArticulo4").value=parseInt(JSON.parse(localStorage.getItem("numeroGuardado4")));    
-*/
-
-/*
-let productoGenerico = document.getElementsByClassName("cotizaciones__name");
-for (let numeroDeProductosGenericos = 0; numeroDeProductosGenericos < productoGenerico.length; numeroDeProductosGenericos++) {
-let indice=productos.findIndex(productos => productos.id === numeroDeProductosGenericos+1);
-let nombreDeProductoGenerico=eliminarComillas(JSON.stringify(productos[indice].nombreDeProducto));
-productoGenerico[numeroDeProductosGenericos].innerHTML = nombreDeProductoGenerico;
-}
-*/
 
 function eliminarComillas(palabraConComillas) {
     let palabraSinComillas;
