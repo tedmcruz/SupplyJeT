@@ -91,6 +91,7 @@ async function obtenerNumero() {
     .then( (res) => res.json())
     .then ( (datos) => {
 
+
         datos.forEach((producto) => {
 
             numeroArticuloParaFormula = "numeroArticulo"+producto.idDeProducto;
@@ -107,7 +108,7 @@ async function obtenerNumero() {
                 texto = "El numero tiene que ser positivo y entero.";
             }
             document.getElementById("textoArticulo1").innerHTML = texto;
-            precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4;
+            precioTotalTodosLosArticulos=precioTotalArticulo1+precioTotalArticulo2+precioTotalArticulo3+precioTotalArticulo4+precioTotalArticulo5;
             textoPrecioTotal="El costo de todos los articulos es de "+precioTotalTodosLosArticulos+" pesos.";
             document.getElementById("cotizaciones_precio_total").innerHTML = textoPrecioTotal;
             localStorage.setItem("numeroGuardado1",JSON.stringify(numeroArticuloCotizacion));
