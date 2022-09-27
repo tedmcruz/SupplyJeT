@@ -300,7 +300,7 @@ footer {
   font-weight: bolder;
   justify-content: center;
   align-items: center;
-  margin: 0 5%; }
+  margin: 0 3rem 0 0; }
 
 #cotizaciones_precio_total {
   display: flex;
