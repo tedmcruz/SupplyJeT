@@ -27,7 +27,7 @@ npm install node-sass -D = to install node_modules. If an error is received beca
 npm install = to install all dependencies the project may have as according to the "package.json" file on the project's main folder.
 npm install nodeman -D = to install nodeman
 
----------------USE TRANSLATER---------------------------------------
+---------------USE TRANSLATER SCSS---------------------------------------
 (Here a "," [comma] is needed after every line except the last line before "}" [closing bracket] )
 "build-sass": "node-sass --include-path scss sass/index.scss css/translated.css", = script to write under "test" on "package.json" file. 
 npm run build-sass = to create and link "css\traslated.css" file to "sass\index.scss" file.
@@ -36,10 +36,7 @@ npm run build-sass = to create and link "css\traslated.css" file to "sass\index.
 npm run watch-sass = to run script continiously and update "css\translated.css"file automatically.
 press "CTRL" + "c" on terminal = to stop watch-sass
 
-
-
-
-"addingEventsAndFixingSyntax"
+--------------------------------------------------------------------
 
 To allow fetch() to work on javescript with local files, you have to run : "npm install -g http-server" , this will allow you to install a local server to allow fetch. 
     Then simply run http-server in any of your project directories:
