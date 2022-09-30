@@ -105,9 +105,9 @@ REACT JS
 
     To travel to directory with "spaces" in between word you have to surround forlder with quotations = "folder"
 
-        A:/folder/"folder name"/folder/folder/   or   cd A:/folder/"folder name"/folder/folder/
+        C:/Users/"Ted Cruz"/Desktop/SupplyJeT/   or   cd C:/Users/"Ted Cruz"/Desktop/SupplyJeT/
 
-    To navigate up one directory level
+    To navigate up one directory level use:
 
         cd ~
 
