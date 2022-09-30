@@ -115,4 +115,10 @@ REACT JS
 
         cd ~
 
+---------------------------Add Polyfill for backward compatability------------------------
+
+    Polyfill adds backward compatibility for older browsers to be able to view our content.
+
+        npm install --save core-js@3.25.3 
+
 
