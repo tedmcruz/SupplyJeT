@@ -78,11 +78,11 @@ REACT JS
 
         Then download the required dependencies: 
 
-            npx create-react-app my-app
+            npx create-react-app [name-of-app]
 
         Then use the following command to run the application. Error has been fixed.
 
-            cd my-app 
+            cd [name-of-app]
             npm start
 
 
@@ -103,6 +103,8 @@ REACT JS
 
 ----------------------------Moving between directories inside command-line (cmd)-------------------------------
 
+    To point to folder in cmd use "/" instead of "\".
+    
     To travel to directory with "spaces" in between word you have to surround forlder with quotations = "folder"
 
         C:/Users/"Ted Cruz"/Desktop/SupplyJeT/   or   cd C:/Users/"Ted Cruz"/Desktop/SupplyJeT/
