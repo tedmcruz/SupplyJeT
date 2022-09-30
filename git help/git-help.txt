@@ -46,3 +46,69 @@ To allow fetch() to work on javescript with local files, you have to run : "npm 
 
         http-server "d:\my_project"
         http-server "C:\Users\Ted Cruz\Desktop\SupplyJeT"
+
+-----------------Install React JS----------------------------------
+
+Inside the main proyect folder, enter following commands:
+
+REACT JS
+
+    To install react-js :     
+    
+        npm install -g create-react-app
+
+    To create app in react :
+
+        create-react-app [name-of-app]
+
+    If previous steps don't work, try this:    
+
+        To update tar (because to fix dependencies error needed for React JS):    
+
+                npm install -g tar@latest
+                npm install tar@6 -g
+
+        If previous command don't work try ignoring the error with:
+
+            npm i tar
+
+        Alternatively you can follow these steps: First, install npm using the command:
+
+            sudo apt install npm
+
+        Then download the required dependencies: 
+
+            npx create-react-app my-app
+
+        Then use the following command to run the application. Error has been fixed.
+
+            cd my-app 
+            npm start
+
+
+    Starts the development server.:
+        
+        cd [name-of-app]
+
+        npm start
+
+    Bundles the app into static files for production and starts the test runner.
+    
+        npm run build
+
+    [DO NOT USE] Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
+        
+        npm run eject
+
+
+----------------------------Moving between directories inside command-line (cmd)-------------------------------
+
+    To travel to directory with "spaces" in between word you have to surround forlder with quotations = "folder"
+
+        C:/Users/"Ted Cruz"/Desktop/SupplyJeT/   or   cd C:/Users/"Ted Cruz"/Desktop/SupplyJeT/
+
+    To navigate up one directory level use:
+
+        cd ~
+
+
