@@ -1,22 +1,22 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
+import {productos} from './Productos';
 
 /*
 import React, { useState, useReducer } from "react";
 */
 
-const Contador = ({stock,initial}) => {
-    const [counter, setCounter] = useState(0);
-   
-    const sumar = () => {
-        if(counter<stock) {
-            setCounter(counter+1)
-        }
-    };
 
-    const restar = () => {
-        if(counter>initial) {
-            setCounter(counter-1)
+const Contador = (producto) => {
+    const [counter, setCounter] = useState(0);
+    stock=producto.stockDeProducto;
+    const controlarValores = (valor) => {
+        if (valor < 0) {
+            return 0;
         }
+        if (valor > stock){
+            return stock;
+        }
+        setCounter(valor);
     };
 
     // const [counter2, valoresControl] = useReducer(controlarValores,0);
@@ -31,19 +31,23 @@ const Contador = ({stock,initial}) => {
                 Contador: {counter}
             </h1>
 
-            <div className="counter-container">
+            <div className="counter">
                 <div
-                    className="counter-button"
+                    className="value-button"
                     id ="decrease"
-                    onClick= {restar}
+                    onClick= {() => {
+                        controlarValores(counter - 1);
+                    }}
                 >
                     -
                 </div>
                 <input type="text" id="number" value={counter} onChange={Contador}/>
                 <div
-                    className="counter-button"
+                    className="value-button"
                     id ="increase"
-                    onClick= {sumar}
+                    onClick= {() => {
+                        controlarValores(counter + 1);
+                    }}
                 >
                     +
                 </div>

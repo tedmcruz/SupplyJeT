@@ -35,9 +35,24 @@ When using "switch" within "while", the code run will skip until the "case" with
 
 -------------------------Difference between "var" , "let" and "const"----------------------------------------
 
-/*
-var declarations are globally scoped or function scoped while let and const are block scoped.
-var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
-They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
-While var and let can be declared without being initialized, const must be initialized during declaration.
-*/
+    /*
+    var declarations are globally scoped or function scoped while let and const are block scoped.
+    var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+    They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
+    While var and let can be declared without being initialized, const must be initialized during declaration.
+    */
+
+--------------------------Difference between ".js" , ".jsx"---------------------------------------------------
+
+    /*
+    They work the same way, but VS Code recognizes HTML properties and code as well as the javascript code when using the ".jsx" extension instead of the ".js" extension.
+    */
+
+----------------------------------------------   React-JS   ---------------------------------------------------
+
+    - To jump to a definition (go to source definition) => "Control" + "Left-Click"
+    - .jsx is easier to use than .js extension for react because it understands HTML properties.
+    - Use "[]" in the time area of a "setTimeout", so that the code only runs once (recommended, will stop from recurring ask of information which would make ads cheaper to pay).
+    - Use "{}" for objects
+    - Use "[]" for arrays
+    - 

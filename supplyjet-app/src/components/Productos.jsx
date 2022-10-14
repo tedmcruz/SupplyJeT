@@ -8,14 +8,14 @@ import img7 from "../images/construction.jpg"
 import img8 from "../images/heavy-machinery.jpg"
 
 export const productos = [
-    {idDeProducto:"1",categoriaDeProducto:"casa", nombreDeProducto: "BAÑOS", descripcionDeProducto: "Este es un baño de calidad.", stockDeProducto:80, precioDeProducto: 10, imagenDeProducto:img1},
-    {idDeProducto:"2",categoriaDeProducto:"casa", nombreDeProducto: "ILUMINACION", descripcionDeProducto: "Esta es una iluminacion de calidad.", stockDeProducto:70, precioDeProducto: 20, imagenDeProducto:img2},
-    {idDeProducto:"3",categoriaDeProducto:"casa", nombreDeProducto: "PISOS", descripcionDeProducto: "Este es un piso de calidad.", stockDeProducto:60, precioDeProducto: 30, imagenDeProducto:img3},
-    {idDeProducto:"4",categoriaDeProducto:"casa", nombreDeProducto: "COCINAS", descripcionDeProducto: "Esta es una cocina de calidad.", stockDeProducto:50, precioDeProducto: 40, imagenDeProducto:img4},
-    {idDeProducto:"5",categoriaDeProducto:"trabajo", nombreDeProducto: "OFICINAS", descripcionDeProducto: "Esta es una oficina de calidad.", stockDeProducto:40, precioDeProducto: 50, imagenDeProducto:img5},
-    {idDeProducto:"6",categoriaDeProducto:"trabajo", nombreDeProducto: "FERRETERIA", descripcionDeProducto: "Esta es una ferreteria de calidad.", stockDeProducto:30, precioDeProducto: 60, imagenDeProducto:img6},
-    {idDeProducto:"7",categoriaDeProducto:"trabajo", nombreDeProducto: "CONSTRUCCION", descripcionDeProducto: "Esta es una construccion de calidad.", stockDeProducto:20, precioDeProducto: 70, imagenDeProducto:img7},
-    {idDeProducto:"8",categoriaDeProducto:"trabajo", nombreDeProducto: "EQUIPOS", descripcionDeProducto: "Estos son equipos de calidad.", stockDeProducto:10, precioDeProducto: 80, imagenDeProducto:img8}
+    {idDeProducto:1,categoriaDeProducto:"casa", nombreDeProducto: "BAÑOS", descripcionDeProducto: "Este es un baño de calidad.", stockDeProducto:80, precioDeProducto: 10, imagenDeProducto:img1},
+    {idDeProducto:2,categoriaDeProducto:"casa", nombreDeProducto: "ILUMINACION", descripcionDeProducto: "Esta es una iluminacion de calidad.", stockDeProducto:70, precioDeProducto: 20, imagenDeProducto:img2},
+    {idDeProducto:3,categoriaDeProducto:"casa", nombreDeProducto: "PISOS", descripcionDeProducto: "Este es un piso de calidad.", stockDeProducto:60, precioDeProducto: 30, imagenDeProducto:img3},
+    {idDeProducto:4,categoriaDeProducto:"casa", nombreDeProducto: "COCINAS", descripcionDeProducto: "Esta es una cocina de calidad.", stockDeProducto:50, precioDeProducto: 40, imagenDeProducto:img4},
+    {idDeProducto:5,categoriaDeProducto:"trabajo", nombreDeProducto: "OFICINAS", descripcionDeProducto: "Esta es una oficina de calidad.", stockDeProducto:40, precioDeProducto: 50, imagenDeProducto:img5},
+    {idDeProducto:6,categoriaDeProducto:"trabajo", nombreDeProducto: "FERRETERIA", descripcionDeProducto: "Esta es una ferreteria de calidad.", stockDeProducto:30, precioDeProducto: 60, imagenDeProducto:img6},
+    {idDeProducto:7,categoriaDeProducto:"trabajo", nombreDeProducto: "CONSTRUCCION", descripcionDeProducto: "Esta es una construccion de calidad.", stockDeProducto:20, precioDeProducto: 70, imagenDeProducto:img7},
+    {idDeProducto:8,categoriaDeProducto:"trabajo", nombreDeProducto: "EQUIPOS", descripcionDeProducto: "Estos son equipos de calidad.", stockDeProducto:10, precioDeProducto: 80, imagenDeProducto:img8}
 ];
 /* 
 class Producto {

@@ -21,7 +21,7 @@ const Item = () => {
                         <h5>ID = {producto.idDeProducto}</h5>
                         <h6>#Categoria</h6>
                         <javascript>stock={producto.stockDeProducto}</javascript>
-                        <Contador/>
+                        {/* <Contador/> */}
                     </div>
                 </article>
             ))}    

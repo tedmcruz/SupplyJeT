@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.counter-button {
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: gray;
+}
+
+.counter-container{
+  display: flex;
+}
