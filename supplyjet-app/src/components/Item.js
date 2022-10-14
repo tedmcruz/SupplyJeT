@@ -1,5 +1,6 @@
 import React from "react";
 import {productos} from './Productos';
+import Contador from "./Contador";
 
 
 
@@ -19,6 +20,8 @@ const Item = () => {
                         <h4>${producto.precioDeProducto}</h4>
                         <h5>ID = {producto.idDeProducto}</h5>
                         <h6>#Categoria</h6>
+                        <javascript>stock={producto.stockDeProducto}</javascript>
+                        <Contador/>
                     </div>
                 </article>
             ))}    

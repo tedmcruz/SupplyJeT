@@ -1,12 +1,14 @@
 import React, { useState} from "react";
-
+import {productos} from './Productos';
 /*
 import React, { useState, useReducer } from "react";
 */
 
+let stock = 10;
+
 const Contador = () => {
     const [counter, setCounter] = useState(0);
-    let stock = 10;
+
     const controlarValores = (valor) => {
         if (valor < 0) {
             return 0;
