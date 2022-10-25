@@ -2,7 +2,7 @@ import './App.css';
 import './NavBar.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import Contador from './components/Contador';
+// import Contador from './components/Contador';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
         <NavBar />
       </header>
       <ItemListContainer />
-      <Contador stock={10} initial={0}/>
       <ItemDetailContainer/>
     </div>
     

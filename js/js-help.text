@@ -55,4 +55,4 @@ When using "switch" within "while", the code run will skip until the "case" with
     - Use "[]" in the time area of a "setTimeout", so that the code only runs once (recommended, will stop from recurring ask of information which would make ads cheaper to pay).
     - Use "{}" for objects
     - Use "[]" for arrays
-    - 
+    - "return" runs before "useEffect".
