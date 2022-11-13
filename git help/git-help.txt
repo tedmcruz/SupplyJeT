@@ -119,6 +119,10 @@ REACT JS
 
     Polyfill adds backward compatibility for older browsers to be able to view our content.
 
-        npm install --save core-js@3.25.3 
+        npm install --save core-js@3.25.3
+
+--------------------------Add React-JS routing dependencies ------------------------------
+
+    Use "npm install react-router-dom" to add dependencies of React-JS to manage routing within a proyect.
 
 

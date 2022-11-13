@@ -56,3 +56,4 @@ When using "switch" within "while", the code run will skip until the "case" with
     - Use "{}" for objects
     - Use "[]" for arrays
     - "return" runs before "useEffect".
+    - Use "npm install react-router-dom" to add dependencies of React-JS to manage routing within a proyect.
