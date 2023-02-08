@@ -1,6 +1,6 @@
 function testConstructor() 
 {
-    const nombresDeProductos = [
+    const nameOfProducts = [
         "BAÑOS",
         "ILUMINACION",
         "PISOS",
@@ -11,7 +11,7 @@ function testConstructor()
         "EQUIPOS"
     ];
 
-    const preciosDeProductos = [
+    const priceOfProducts = [
         10,
         20,
         30,
@@ -22,34 +22,35 @@ function testConstructor()
         80
     ];
 
-    let nombre = prompt(nombresDeProductos,"BAÑOS");
-        while(nombresDeProductos.includes(nombre)!=true) {
+    let name = prompt(nameOfProducts,"BAÑOS");
+        while(nameOfProducts.includes(name)!=true) {
             alert("INTRODUZCA PRODUCTO VALIDO");
-            nombre = prompt(nombresDeProductos,"BAÑOS");
-            // if (nombresDeProductos.includes(nombre)==true){
+            name = prompt(nameOfProducts,"BAÑOS");
+            // if (nameOfProducts.includes(name)==true) {
             //     break;
             // };
         };
-    let precio = parseFloat(preciosDeProductos[nombresDeProductos.indexOf(nombre)]);
-    let cantidad = prompt("INTRODUZCA CANTIDAD DE "+nombre+" QUE DESEA.");
+    let price = parseFloat(priceOfProducts[nameOfProducts
+.indexOf(name)]);
+    let quantity = prompt("INTRODUZCA CANTIDAD DE "+name+" QUE DESEA.");
     
     class producto {
-        constructor (nombre, precio, cantidad){
-            this.nombre = nombre;
-            this.precio = parseFloat(precio);
-            this.cantidad = parseInt(cantidad);
+        constructor (name, price, quantity){
+            this.name = name;
+            this.price = parseFloat(price);
+            this.quantity = parseInt(quantity);
         }
         sumarItbis() {
-            this.precio = this.cantidad* this.precio * 1.18;
-            this.precio = this.precio.toFixed(2);
+            this.price = this.quantity* this.price * 1.18;
+            this.price = this.price.toFixed(2);
         }
         mostrar() {
-            console.log("El precio de "+this.cantidad+" "+this.nombre+" = "+this.precio+".")
+            console.log("El price de "+this.quantity+" "+this.name+" = "+this.price+".")
         };
     }
 
-    const producto1 = new producto(nombre,precio,cantidad);
-    producto1.sumarItbis();
-    producto1.mostrar();
+    const product1 = new producto(name,price,quantity);
+    product1.sumarItbis();
+    product1.mostrar();
     
 }
