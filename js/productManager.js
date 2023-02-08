@@ -22,35 +22,40 @@ function testConstructor()
         80
     ];
 
-    let name = prompt(nameOfProducts,"BAÑOS");
-        while(nameOfProducts.includes(name)!=true) {
-            alert("INTRODUZCA PRODUCTO VALIDO");
-            name = prompt(nameOfProducts,"BAÑOS");
+    let name = prompt("INTRODUZCA NOMBRE DEL ARTICULO");
+
+    let description = prompt("INTRODUZCA DESCRIPCION DE (DEL / DE LA) "+name+".");
+
+    let price = prompt("INTRODUZCA PRECIO DE (DEL / DE LA) "+name);
+
+    let thumbnail = "Ruta de Imagen";
+
+    let code = prompt(codeOfProducts,"01");
+    while(codeOfProducts.includes(code)!=true) {
+        alert("CODIGO REPETIDO");
+        code = prompt(codeOfProducts,"01");
             // if (nameOfProducts.includes(name)==true) {
             //     break;
             // };
         };
-    let price = parseFloat(priceOfProducts[nameOfProducts.indexOf(name)]);
-    let stock = prompt("INTRODUZCA CANTIDAD DE "+name+" QUE DESEA.");
+
+    let stock = prompt("INTRODUZCA CANTIDAD DISPONIBLE DE "+name+".");
     
     class productManager {
 
         constructor (name, description, price, thumbnail, code, stock){
             this.name = name;
+            this.description = description;
             this.price = parseFloat(price);
+            this.thumbnail = thumbnail;
+            this.code = code;
             this.stock = parseInt(stock);
         }
-        sumarItbis() {
-            this.price = this.stock* this.price * 1.18;
-            this.price = this.price.toFixed(2);
-        }
         mostrar() {
-            console.log("El price de "+this.stock+" "+this.name+" = "+this.price+".")
+            console.log(nameOfProducts);
         };
     }
 
     const product = new productManager(name, description, price, thumbnail, code, stock);
-    product.sumarItbis();
     product.mostrar();
-    
 }
