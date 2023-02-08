@@ -1,5 +1,9 @@
 function testConstructor() 
 {
+    const codeOfProducts [
+        
+    ];
+
     const products = [
     ];
 
