@@ -27,7 +27,7 @@ function testConstructor()
     let thumbnail = "Ruta de Imagen";
 
     let code = prompt(codeOfProducts,"01");
-    while(codeOfProducts.includes(code)!=true) {
+    while(codeOfProducts.includes(code)=true) {
         alert("CODIGO REPETIDO");
         code = prompt(codeOfProducts,"01");
             // if (nameOfProducts.includes(name)==true) {
