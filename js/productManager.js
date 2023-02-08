@@ -1,11 +1,12 @@
+const products = [
+];
+
+const codeOfProducts = [
+
+];
+
 function testConstructor() 
 {
-    const codeOfProducts [
-        
-    ];
-
-    const products = [
-    ];
 
     let name = prompt("INTRODUZCA NOMBRE DEL ARTICULO");
 
@@ -13,17 +14,21 @@ function testConstructor()
 
     let price = prompt("INTRODUZCA PRECIO DE (DEL / DE LA) "+name);
 
-    let thumbnail = "Ruta de Imagen";
+    let thumbnail = "RUTA DE IMAGEN";
 
-    let code = prompt(codeOfProducts,"01");
-    while(codeOfProducts.includes(code)=true) {
-        alert("CODIGO REPETIDO");
-        code = prompt(codeOfProducts,"01");
-            // if (nameOfProducts.includes(name)==true) {
-            //     break;
-            // };
+    let code = prompt("INTRODUZCA CODIGO DE (DEL / DE LA) "+name,"01");
+    while (codeOfProducts.lenght === 0) {
+        alert("DIGITAR CODIGO");
+        code = prompt("INTRODUZCA CODIGO DE (DEL / DE LA) "+name,"01");
+            if (codeOfProducts.includes(code)==true) {
+                alert("CODIGO REPETIDO")
+                code = prompt("INTRODUZCA CODIGO DE (DEL / DE LA) "+name,"01");
+                if (codeOfProducts.includes(code)==true) {
+                    alert("CODIGO REPETIDO")
+                    break;
+            };
         };
-
+    };
     let stock = prompt("INTRODUZCA CANTIDAD DISPONIBLE DE "+name+".");
     
     class productManager {
@@ -43,5 +48,14 @@ function testConstructor()
 
     const product = new productManager(name, description, price, thumbnail, code, stock);
     products.push(product)
-    products.mostrar();
+    codeOfProducts.push(product.code)
+    console.log(products)
+}
+
+function searchForRepeatedCode(designatedCode){
+    return designatedCode.code === code
+}
+
+function showProducts(){
+    console.log(products)
 }
