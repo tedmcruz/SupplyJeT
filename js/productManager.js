@@ -49,7 +49,7 @@ function testConstructor()
         };
     }
 
-    const product = new product(name, description, price, thumbnail, code, stock);
+    const product = new productManager(name, description, price, thumbnail, code, stock);
     product.sumarItbis();
     product.mostrar();
     
