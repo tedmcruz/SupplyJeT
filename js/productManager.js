@@ -49,8 +49,8 @@ function testConstructor()
         };
     }
 
-    const product1 = new product(name, description, price, thumbnail, code, stock);
-    product1.sumarItbis();
-    product1.mostrar();
+    const product = new product(name, description, price, thumbnail, code, stock);
+    product.sumarItbis();
+    product.mostrar();
     
 }
