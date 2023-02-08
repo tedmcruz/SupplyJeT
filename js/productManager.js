@@ -1,21 +1,6 @@
 function testConstructor() 
 {
-    const nameOfProducts = [
-    ];
-
-    const descriptionOfProducts = [
-    ];
-
-    const priceOfProducts = [
-    ];
-
-    const thumbnailOfProducts = [
-    ];
-
-    const codeOfProducts = [
-    ];
-
-    const stockOfProducts = [
+    const products = [
     ];
 
     let name = prompt("INTRODUZCA NOMBRE DEL ARTICULO");
@@ -53,5 +38,6 @@ function testConstructor()
     }
 
     const product = new productManager(name, description, price, thumbnail, code, stock);
-    product.mostrar();
+    products.push(product)
+    products.mostrar();
 }
