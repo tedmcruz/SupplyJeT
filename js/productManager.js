@@ -1,25 +1,21 @@
 function testConstructor() 
 {
     const nameOfProducts = [
-        "BAÑOS",
-        "ILUMINACION",
-        "PISOS",
-        "COCINAS",
-        "OFICINAS",
-        "FERRETERIA",
-        "CONSTRUCCION",
-        "EQUIPOS"
+    ];
+
+    const descriptionOfProducts = [
     ];
 
     const priceOfProducts = [
-        10,
-        20,
-        30,
-        40,
-        50,
-        60,
-        70,
-        80
+    ];
+
+    const thumbnailOfProducts = [
+    ];
+
+    const codeOfProducts = [
+    ];
+
+    const stockOfProducts = [
     ];
 
     let name = prompt("INTRODUZCA NOMBRE DEL ARTICULO");
