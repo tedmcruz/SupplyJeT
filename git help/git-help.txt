@@ -47,6 +47,8 @@ To allow fetch() to work on javescript with local files, you have to run : "npm 
         http-server "d:\my_project"
         http-server "C:\Users\Ted Cruz\Desktop\SupplyJeT"
 
+    Use "CONTROL" or "CTRL" + "C" to exit servers.
+
 -----------------Install React JS----------------------------------
 
 Inside the main proyect folder, enter following commands:
@@ -59,7 +61,7 @@ REACT JS
 
     To create app in react :
 
-        create-react-app [name-of-app]
+        create-react-app [name-of-app]   or   npx create-react-app [name-of-app] (this command adds dependencies from the start)
 
     If previous steps don't work, try this:    
 
@@ -112,5 +114,15 @@ REACT JS
     To navigate up one directory level use:
 
         cd ~
+
+---------------------------Add Polyfill for backward compatability------------------------
+
+    Polyfill adds backward compatibility for older browsers to be able to view our content.
+
+        npm install --save core-js@3.25.3
+
+--------------------------Add React-JS routing dependencies ------------------------------
+
+    Use "npm install react-router-dom" to add dependencies of React-JS to manage routing within a proyect.
 
 
