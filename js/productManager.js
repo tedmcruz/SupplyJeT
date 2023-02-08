@@ -34,7 +34,7 @@ function testConstructor()
 .indexOf(name)]);
     let quantity = prompt("INTRODUZCA CANTIDAD DE "+name+" QUE DESEA.");
     
-    class producto {
+    class product {
         constructor (name, price, quantity){
             this.name = name;
             this.price = parseFloat(price);
@@ -49,7 +49,7 @@ function testConstructor()
         };
     }
 
-    const product1 = new producto(name,price,quantity);
+    const product1 = new product(name,price,quantity);
     product1.sumarItbis();
     product1.mostrar();
     
