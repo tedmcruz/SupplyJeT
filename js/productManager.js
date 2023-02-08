@@ -30,26 +30,26 @@ function testConstructor()
             //     break;
             // };
         };
-    let price = parseFloat(priceOfProducts[nameOfProducts
-.indexOf(name)]);
-    let quantity = prompt("INTRODUZCA CANTIDAD DE "+name+" QUE DESEA.");
+    let price = parseFloat(priceOfProducts[nameOfProducts.indexOf(name)]);
+    let stock = prompt("INTRODUZCA CANTIDAD DE "+name+" QUE DESEA.");
     
-    class product {
-        constructor (name, price, quantity){
+    class productManager {
+
+        constructor (name, description, price, thumbnail, code, stock){
             this.name = name;
             this.price = parseFloat(price);
-            this.quantity = parseInt(quantity);
+            this.stock = parseInt(stock);
         }
         sumarItbis() {
-            this.price = this.quantity* this.price * 1.18;
+            this.price = this.stock* this.price * 1.18;
             this.price = this.price.toFixed(2);
         }
         mostrar() {
-            console.log("El price de "+this.quantity+" "+this.name+" = "+this.price+".")
+            console.log("El price de "+this.stock+" "+this.name+" = "+this.price+".")
         };
     }
 
-    const product1 = new product(name,price,quantity);
+    const product1 = new product(name, description, price, thumbnail, code, stock);
     product1.sumarItbis();
     product1.mostrar();
     
