@@ -20,8 +20,8 @@ function testConstructor()
     let thumbnail = "RUTA DE IMAGEN";
 
     let code = prompt("INTRODUZCA CODIGO DE (DEL / DE LA) "+name+".");
-    while (code === 0 || codeOfProductsLength === 0 || codeOfProducts.includes(code)===true) {
-        if (codeOfProducts.includes(code)!=true && code != 0 && code != null && code != undefined) {
+    while (code === 0 || codeOfProducts.includes(code)===true || code === undefined || code === NaN || code === null || code.trim() === "") {
+        if (codeOfProducts.includes(code)!=true && code != 0 && code != null && code != NaN && code != undefined && code.trim() != "") {
             break;
         };
         alert("DIGITAR CODIGO NO REPETIDO");
@@ -57,7 +57,7 @@ function getProductById(){
     if (code === 0 || products.length === 0 || products.length === undefined ||codeOfProducts.includes(code)!=true || code === null || code === undefined) {
         alert("CODIGO NO EXISTE");}
     else if (codeOfProducts.includes(code)===true) {
-            let searchedProduct = products.find(product => product.code === code);
+            searchedProduct = products.find(product => product.code === code);
             console.log(searchedProduct);
         };
     console.log("El codigo introducido fue ="+code)
