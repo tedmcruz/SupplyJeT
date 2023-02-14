@@ -60,7 +60,7 @@ function getProductById(){
             let searchedProduct = products.find(product => product.code === code);
             console.log(searchedProduct);
         };
-    console.log(code)
+    console.log("El codigo introducido fue ="+code)
     };
 
 function showProducts(){
