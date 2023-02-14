@@ -51,20 +51,29 @@ function testConstructor()
     console.log(products)
 }
 
-function getProductsById(){
-    let searchedProduct = [];
+function getProductById(){
+    let searchedProduct;
     let code = prompt("INTRODUZCA CODIGO DEL ARTICULO DECEADO PARA LA BUSQUEDA.");
-    while (code === 0 || codeOfProductsLength === 0 || codeOfProducts.includes(code)!=true || code === null || code === undefined) {
-        if (codeOfProducts.includes(code)=true) {
-            searchedProduct.push = code;
-            break;
+    if (code === 0 || products.length === 0 || products.length === undefined ||products.includes(code)!=true || code === null || code === undefined) {
+        alert("CODIGO NO EXISTE");}
+    else if (codeOfProducts.includes(code)===true) {
+            searchedProduct = codeOfProducts.find(searchedProduct => products.code === code);
+            console.log(searchedProduct);
         };
-        alert("CODIGO NO EXISTE");
-        code = prompt("INTRODUZCA CODIGO DEL ARTICULO DECEADO PARA LA BUSQUEDA.");
     };
-    console.log(searchedProduct);
-}
+
+const trees = [
+    { name: "birch", count: 4 },
+    { name: "maple", count: 5 },
+    { name: "oak", count: 2 }
+  ];
 
 function showProducts(){
+      
+      const result = trees.find(tree => tree.name === "oak");
+
+      console.log(result)
+      
+      // { name: "oak", count, 2 }
     console.log(products)
 }
