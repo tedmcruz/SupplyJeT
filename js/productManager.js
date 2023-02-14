@@ -54,26 +54,15 @@ function testConstructor()
 function getProductById(){
     let searchedProduct;
     let code = prompt("INTRODUZCA CODIGO DEL ARTICULO DECEADO PARA LA BUSQUEDA.");
-    if (code === 0 || products.length === 0 || products.length === undefined ||products.includes(code)!=true || code === null || code === undefined) {
+    if (code === 0 || products.length === 0 || products.length === undefined ||codeOfProducts.includes(code)!=true || code === null || code === undefined) {
         alert("CODIGO NO EXISTE");}
     else if (codeOfProducts.includes(code)===true) {
-            searchedProduct = codeOfProducts.find(searchedProduct => products.code === code);
+            let searchedProduct = products.find(product => product.code === code);
             console.log(searchedProduct);
         };
+    console.log(code)
     };
 
-const trees = [
-    { name: "birch", count: 4 },
-    { name: "maple", count: 5 },
-    { name: "oak", count: 2 }
-  ];
-
 function showProducts(){
-      
-      const result = trees.find(tree => tree.name === "oak");
-
-      console.log(result)
-      
-      // { name: "oak", count, 2 }
     console.log(products)
 }
