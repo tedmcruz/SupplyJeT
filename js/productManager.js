@@ -66,3 +66,18 @@ function getProductById(){
 function showProducts(){
     console.log(products)
 }
+
+function eliminateProductByCode(){
+    const filteredProducts = Array.from(products);
+    let code = prompt("INTRODUZCA CODIGO DEL ARTICULO QUE DESEA ELIMINAR.");
+    if (code === 0 || products.length === 0 || products.length === undefined ||codeOfProducts.includes(code)!=true || code === null || code === undefined) {
+        alert("CODIGO NO EXISTE");}
+    else if (codeOfProducts.includes(code)===true) {
+            eliminateProduct = filteredProducts.find(product => product.code === code);
+            console.log(eliminateProduct);
+        };
+    console.log("El codigo introducido fue ="+code)
+    const codeOfProductoToRemove = filteredProducts.findIndex((product) => product.code === code);
+        filteredProducts.splice(codeOfProductoToRemove, code);
+        return filteredProducts;
+    };
