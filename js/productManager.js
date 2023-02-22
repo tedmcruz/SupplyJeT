@@ -79,5 +79,5 @@ function eliminateProductByCode(){
     console.log("El codigo introducido fue ="+code)
     const codeOfProductoToRemove = filteredProducts.findIndex((product) => product.code === code);
         filteredProducts.splice(codeOfProductoToRemove, code);
-        return filteredProducts;
+        console.log(filteredProducts);
     };
